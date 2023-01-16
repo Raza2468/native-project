@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import CalendarPicker from 'react-native-calendar-datepicker';
+import { Calendar } from 'react-native-calendars';
 import Footer from './Footer';
-// npm install --save react-native-calendar-datepicker
 
 export default function CalenderScreen() {
 
 
     const [selectedStartDate, setSelectedStartDate] = useState(null);
-    const startDate = selectedStartDate
-        ? selectedStartDate.format('YYYY-MM-DD').toString()
-        : '';
+    const [SelectedEndDate, setSelectedEndDate] = useState(null);
+
+    console.log(selectedStartDate, "selectedStartDate");
     const styles = StyleSheet.create({
         container: {
             flex: 1,
@@ -61,20 +60,39 @@ export default function CalenderScreen() {
     });
     return (
         <View style={styles.container}>
-            {/* <StatusBar style="auto" /> */}
-            <CalendarPicker onDateChange={setSelectedStartDate}
-            // nextTitle=""
+            <Calendar
+                // onDateChange={setSelectedStartDate}\
+                style={{
+                    // borderWidth: 1,
+                    borderColor: 'gray',
+                    height: 390,
+                    width: 390
+                }}
+                onDayPress={day => {
+                    console.log('selected day', day);
+                    setSelectedStartDate(day.dateString)
+
+                }}
+                onDayLongPress={day => {
+                    console.log('selected ENd day', day);
+                    setSelectedEndDate(day.dateString)
+                }}
+                // monthFormat={'yyyy MM'}
+                onMonthChange={month => {
+                    console.log('month changed', month);
+                }}
+                showWeekNumbers={true}
+                enableSwipeMonths={true}
             />
-            {/* <Text style={styles.dateText}>Start with {startDate}</Text> */}
-            {/* <Text style={styles.dateText}>End With {startDate}</Text> */}
 
             <View style={styles.btncontainer}>
-                <Text style={styles.btnHeader}>Start with {startDate}</Text>
-                <Text style={styles.btnHeader} >End With {startDate}</Text>
+                <Text style={styles.btnHeader}>Start with {selectedStartDate}</Text>
+                <Text style={styles.btnHeader} >End With {SelectedEndDate}</Text>
+                {/* <Text style={styles.btnHeader}>{selectedStartDate === null ? "Start with " : selectedStartDate}</Text> */}
             </View>
-            <View style={styles.flexdown}>
+            {/* <View style={styles.flexdown}>
                 <Footer />
-            </View>
+            </View> */}
         </View>
 
     );

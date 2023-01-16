@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, TextInput, Button } from 'react-native'
+import { StyleSheet, Text, View, Image, TextInput, Button, ImageBackground, ScrollView } from 'react-native'
 import React from 'react'
 import logo from '../assets/logo.png';
 import { useNavigation } from '@react-navigation/native';
@@ -9,67 +9,88 @@ export default function Signup() {
   const navigation = useNavigation();
   const [text, onChangeText] = React.useState('Useless Text');
   const [number, onChangeNumber] = React.useState('');
+  const image = { uri: 'https://i.pinimg.com/originals/d0/2b/5b/d02b5b51fadb746eb1b2e3017ae1a716.jpg' };
+  const logo = { uri: 'https://i.pinimg.com/originals/b1/9e/56/b19e56e0b9e23b771eb2dd1183bfe378.png' };
 
   return (
 
-    <View style={styles.main}>
-      <View style={styles.logincontainer}>
-        <Image
-          style={styles.tinyLogo}
-          source={logo}
-        />
+    <View style={styles.container}>
+      <ImageBackground source={image} resizeMode="cover" style={styles.image}>
+        <ScrollView>
 
-        <View style={styles.loginform}>
+          <View style={styles.main}>
+            <View style={styles.logincontainer}>
 
-          <TextInput
-            style={styles.input}
-            onChangeText={onChangeNumber}
-            value={number}
-            placeholder="I.P xxx"
+              {/* <View style={styles.loginform}> */}
+              <View>
+                <Image
+                  style={styles.tinyLogo}
+                  source={logo}
+                />
 
-          />
-          <TextInput
-            style={styles.input}
-            onChangeText={onChangeNumber}
-            value={number}
-            placeholder="Username"
+                <TextInput
+                  style={styles.input}
+                  onChangeText={onChangeNumber}
+                  value={number}
+                  placeholder="I.P xxx"
 
-          />
-          <TextInput
-            style={styles.input}
-            onChangeText={onChangeNumber}
-            value={number}
-            placeholder="Password"
-            keyboardType="visible-password"
-          />
+                />
+                <TextInput
+                  style={styles.input}
+                  onChangeText={onChangeNumber}
+                  value={number}
+                  placeholder="Username"
 
-          <Text style={styles.forget}>Forget Password?</Text>
-          <View style={styles.signbtn}>
-            <Button title="Sign in"
-              color="#1877F2"
-              style={styles.btn}
-              onPress={() => navigation.navigate('Homescreen')}
-            />
+                />
+                <TextInput
+                  style={styles.input}
+                  onChangeText={onChangeNumber}
+                  value={number}
+                  placeholder="Password"
+                  keyboardType="visible-password"
+                />
+
+                <Text style={styles.forget}>Forget Password?</Text>
+                <View style={styles.signbtn}>
+                  <Button title="Sign in"
+                    color="#1877F2"
+                    style={styles.btn}
+                    onPress={() => navigation.navigate('Homescreen')}
+                  />
+                </View>
+
+              </View>
+            </View>
           </View>
 
-        </View>
-      </View>
+        </ScrollView>
+      </ImageBackground>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
+
+
+
+  container: {
+    flex: 1,
+  },
+  image: {
+    flex: 1,
+    justifyContent: 'center',
+  },
   main: {
     padding: 40,
     display: "flex",
     flexDirection: "column",
     flex: 1,
-    justifyContent:"center",
-    alignItems:"center",
+    justifyContent: "center",
+    alignItems: "center",
   },
   logincontainer: {
-    width: "100%",
-    height: "60%",
+    // width: "100%",
+    // height: "160%",
     backgroundColor: "white",
     padding: 20,
     elevation: 9,
@@ -80,6 +101,10 @@ const styles = StyleSheet.create({
   tinyLogo: {
     width: "90%",
     height: 100,
+    padding: 80,
+    margin:80,
+    marginLeft:10
+
   },
   loginform: {
     width: "100%",
@@ -103,12 +128,16 @@ const styles = StyleSheet.create({
     width: "60%",
     height: 40,
     marginTop: 15,
-    alignSelf: "center"
+    alignSelf: "center",
+    // borderRadius: 150,
+    
   },
   btn: {
-    borderRadius: 150,
+    borderRadius: 14,
+    backgroundColor: '#F2F2F2',
+    minWidth: '25%',
+    textAlign: 'center',
+    color: 'skyBlue',
+    shadowColor: 'gray',
   },
-
-
-
 })

@@ -14,7 +14,7 @@ import Recording from './Component/Recording';
 import Notification from './Component/Notification';
 import SettingScreen from './Component/Setting';
 import Statusscreen from './Component/Statusscreen';
-// import CalenderScreen from './Component/Calendar';
+import CalenderScreen from './Component/Calendar';
 import VideoScreen from './Component/Video';
 
 // import Navbar from "../Navbar";
@@ -36,7 +36,8 @@ const AuthNavigator = () => (
     />
     <Stack.Screen
       name="Devicescreen"
-      options={{headerShown: false}}
+      
+      // options={{headerShown: false}}
       component={Devicescreen}
     />
     <Stack.Screen
@@ -107,13 +108,13 @@ const AuthNavigator = () => (
       }}
       component={VideoScreen}
     />
-    {/* <Stack.Screen
-      name="CalenderScreen"
+    <Stack.Screen
+      name="Calender Screen"
       options={{
-        headerShown: false,
+        // headerShown: false,
       }}
       component={CalenderScreen}
-    /> */}
+    />
     {/* 
     <Stack.Screen
       name="Homescreen"

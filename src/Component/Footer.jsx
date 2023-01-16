@@ -29,15 +29,18 @@ const styles = StyleSheet.create({
   containerfooter: {
     // backgroundColor: 'green',
     // display: "flex",
+    backgroundColor:"#F5F5F5",
     justifyContent: 'space-evenly',
     alignItems: "center",
     height: 70,
     flexDirection: 'row',
     borderTopColor: 'black',
     elevation: 2,
-    shadowColor: 'gray',
-
-    // position: 'absolute', left: 0, right: 0, bottom: 0
+    shadowColor: 'skyblue',
+    // marginBottom: 0
+    top: '40%',
+    width:"100%",
+    position: 'absolute', left: 0, right: 0, bottom: 0,
   }
   ,
   footerchild: {

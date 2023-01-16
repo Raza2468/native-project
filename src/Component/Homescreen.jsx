@@ -11,7 +11,9 @@ import Footer from './Footer';
 
 export default function Homescreen() {
   return (
+
     <View style={styles.main}>
+
       <View style={styles.headingcontainer}>
         <Text style={styles.heading}>Hello, Anderson</Text>
         <Text style={styles.txt}>You have 4 active devices</Text>
@@ -43,15 +45,14 @@ export default function Homescreen() {
         <View style={styles.bg}>
           <View style={styles.btn}>
             <Text>
-              <Icon name={'share-2'} solid />
               {/* <Feather name="share-2" size={24} color="black" /> */}
               <MaterialIcons name="device-hub" size={30} color="skyblue" />
             </Text><Text>View all devices</Text></View>
         </View>
         <View style={styles.bgdbtn}>
-          <View style={styles.btnd}><Text> <Ionicons name="stats-chart" size={24} color="skyblue" /></Text><Text>Stats</Text></View>
-          <View style={styles.btnd}><Text>  <AntDesign name="videocamera" size={24} color="skyblue" /></Text><Text>Recording</Text></View>
-          <View style={styles.btnd}><Text> <AntDesign name="setting" size={24} color="skyblue" /></Text><Text>Setting</Text></View>
+          <View style={styles.btnd}><Text> <Ionicons name="stats-chart" size={24} color="skyblue" style={{padding:9}}/> Stats</Text></View>
+          <View style={styles.btnd}><Text>  <AntDesign name="videocamera" size={24} color="skyblue" /> Recording</Text></View>
+          <View style={styles.btnd}><Text> <AntDesign name="setting" size={24} color="skyblue" /> Setting</Text></View>
         </View>
 
       </View>
@@ -64,10 +65,13 @@ export default function Homescreen() {
 
 const styles = StyleSheet.create({
   main: {
-    paddingTop: 40,
+    // paddingTop: 40,
     display: "flex",
     flexDirection: "column",
     flex: 1,
+    // backgroundColor: "yellow",
+    padding: 10,
+    margin: 10
   },
   setdisplayofpage: {
     display: "flex",
@@ -108,7 +112,7 @@ const styles = StyleSheet.create({
   },
   btn: {
 
-    width: "50%",
+    width: "35%",
     height: "100%",
     backgroundColor: "white",
     display: "flex",
@@ -121,16 +125,18 @@ const styles = StyleSheet.create({
   },
   btnd: {
 
-    width: "30%",
+    width: "20%",
     height: "100%",
     backgroundColor: "white",
     display: "flex",
     alignItems: "center",
-    justifyContent: "space-evenly",
+    justifyContent: 'center',
     flexDirection: "row",
     borderRadius: 10,
     elevation: 4,
     shadowColor: 'gray',
+    // padding:10,
+    // margin:9
   },
   quickflex: {
     display: "flex",
@@ -156,12 +162,21 @@ const styles = StyleSheet.create({
     height: "100%",
     width: "100%",
     backgroundColor: "green",
+    
+    borderRadius: 10,
+    elevation: 8,
+    shadowColor: 'gray',
 
   },
   imagevertical2: {
     height: "45%",
     width: "100%",
     backgroundColor: "green",
+
+    
+    borderRadius: 10,
+    elevation: 8,
+    shadowColor: 'gray',
   },
   heading: {
     fontSize: 30,

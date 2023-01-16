@@ -3,13 +3,16 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {View, Text} from 'react-native';
 import AuthNavigator from './src/AuthNavigator';
+import CalenderScreen from './src/Component/Calendar';
+
+// https://oblador.github.io/react-native-vector-icons/
 
 const App = () => {
   const Stack = createNativeStackNavigator();
   return (
-    // <View>
-    //   <Text>Raza</Text>
-    // </View>
+    // <>
+    //   <CalenderScreen />
+    // </>
 
     <NavigationContainer
       screenOptions={{
