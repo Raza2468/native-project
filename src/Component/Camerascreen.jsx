@@ -12,35 +12,37 @@ export default function Camerascreen() {
 
   return (
     <View style={styles.setpage}>
+      <View>
+        <TouchableOpacity onPress={() => navigation.navigate('Livingroom')}>
+          <ImageBackground source={laungimage} resizeMode="cover" style={styles.image}>
+            <Text style={styles.imgtxt}>Lounge</Text>
+            <View style={styles.dateandspotcontainer}>
+              <View style={styles.spot}></View>
+              <Text style={styles.datandtime}> Nov 15 09:30:31 </Text>
+            </View>
+          </ImageBackground>
+        </TouchableOpacity>
 
-      <TouchableOpacity onPress={() => navigation.navigate('Livingroom')}>
-        <ImageBackground source={laungimage} resizeMode="cover" style={styles.image}>
-          <Text style={styles.imgtxt}>Lounge</Text>
-          <View style={styles.dateandspotcontainer}>
-            <View style={styles.spot}></View>
-            <Text style={styles.datandtime}> Nov 15 09:30:31 </Text>
-          </View>
-        </ImageBackground>
-      </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Livingroom')}>
+          <ImageBackground source={roomimage} resizeMode="cover" style={styles.image}>
+            <Text style={styles.imgtxt}>Room</Text>
+            <View style={styles.dateandspotcontainer}><View style={styles.spot}></View><Text style={styles.datandtime}> Nov 15 09:30:31 </Text></View>
+          </ImageBackground>
+        </TouchableOpacity>
 
-      <TouchableOpacity onPress={() => navigation.navigate('Livingroom')}>
-        <ImageBackground source={roomimage} resizeMode="cover" style={styles.image}>
-          <Text style={styles.imgtxt}>Room</Text>
-          <View style={styles.dateandspotcontainer}><View style={styles.spot}></View><Text style={styles.datandtime}> Nov 15 09:30:31 </Text></View>
-        </ImageBackground>
-      </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Livingroom')}>
+          <ImageBackground source={laungimage} resizeMode="cover" style={styles.image}>
+            <Text style={styles.imgtxt}>Lounge</Text>
+            <View style={styles.dateandspotcontainer}>
+              <View style={styles.spot}></View>
+              <Text style={styles.datandtime}> Nov 15 09:30:31 </Text>
+            </View>
+          </ImageBackground>
+        </TouchableOpacity>
 
-      <TouchableOpacity onPress={() => navigation.navigate('Livingroom')}>
-        <ImageBackground source={laungimage} resizeMode="cover" style={styles.image}>
-          <Text style={styles.imgtxt}>Lounge</Text>
-          <View style={styles.dateandspotcontainer}>
-            <View style={styles.spot}></View>
-            <Text style={styles.datandtime}> Nov 15 09:30:31 </Text>
-          </View>
-        </ImageBackground>
-      </TouchableOpacity>
-      <View style={styles.flexdown}>
-        <Footer />
+        <View style={{ display: "flex",position:"absolute" }}>
+          <Footer />
+        </View>
       </View>
     </View>
   );

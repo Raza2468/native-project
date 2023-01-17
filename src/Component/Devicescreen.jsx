@@ -1,6 +1,6 @@
 import React from 'react'
 import { ImageBackground, StyleSheet, Text, View, Button, Dimensions, SafeAreaView, StatusBar, ScrollView } from 'react-native';
-import laungimage from '../assets/lounge.jpg';
+// import laungimage from '../assets/lounge.jpg';
 import Footer from './Footer';
 import Video from 'react-native-video';
 import { useNavigation } from '@react-navigation/native'
@@ -14,28 +14,32 @@ export default function Devicescreen() {
   const navigation = useNavigation();
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
+      {/* <ScrollView> */}
+
       <View style={styles.miniHeader}>
-      <Text style={styles.heading} >Devices</Text>
-      <View style={styles.btncontainer}>
-        <Text style={styles.btnHeader} onPress={() => navigation.navigate('Gridscreen')}>Grid View</Text>
-        <Text style={styles.btnHeader} ><Ionicons name="add" size={26} color="black" /></Text>
+        <Text style={styles.heading} >Devices</Text>
+        <View style={styles.btncontainer}>
+          <Text style={styles.btnHeader} onPress={() => navigation.navigate('Gridscreen')}>Grid View</Text>
+          <Text style={styles.btnHeader} ><Ionicons name="add" size={35} color="black" /></Text>
         </View>
       </View>
-
       <View style={styles.main}>
         <View style={styles.setdisplayofpage}>
+
+
           <View style={styles.VidoContent}>
+
             <Video
               source={{ uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' }}
               resizeMode="cover"
               shouldPlay
               // onFullscreenUpdate={setOrientation}
-              isMuted
+              // isMuted
               isLooping
               useNativeControls
               onPlaybackStatusUpdate={status => setStatus(() => status)}
-              style={{ width: Dimensions.get('window').width, height: "100%", width: "100%", borderRadius: 8 ,}}
+              style={{ width: Dimensions.get('window').width, height: "100%", width: "100%", borderRadius: 18, }}
             />
           </View>
           <View style={styles.VidoContent}>
@@ -51,6 +55,7 @@ export default function Devicescreen() {
               style={{ width: Dimensions.get('window').width, height: "100%", width: "100%", borderRadius: 8 }}
             />
           </View>
+
           <View style={styles.VidoContent}>
             <Video
               source={{ uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' }}
@@ -68,26 +73,30 @@ export default function Devicescreen() {
 
         </View>
 
-        <Footer />
+        <View
+          style={{ flex: 1,bottom:10,position:"absolute"}}
+        ><Footer /></View>
+
       </View>
-    </SafeAreaView>
+      {/* </ScrollView> */}
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 9,
+    marginTop: "2%",
   },
-  scrollView: {
-    backgroundColor: 'pink',
-    marginHorizontal: 20,
-  },
+  // scrollView: {
+  //   // backgroundColor: 'pink',
+  //   // marginHorizontal: 20,
+  // },
   text: {
     fontSize: 42,
   },
   main: {
-    paddingTop: 40,
+    // paddingTop: 40,
     display: "flex",
     flexDirection: "column",
     flex: 1,
@@ -106,16 +115,23 @@ const styles = StyleSheet.create({
   heading: {
     fontSize: 30,
     fontWeight: "700",
-    marginLeft:-5
+    marginLeft: -5
   },
   VidoContent: {
-    backgroundColor: "red",
-    height: '30%',
+
+    backgroundColor: '#68a0cf',
+    height: '26%',
     // padding: "3%",
     margin: "3%",
     borderTopColor: 'black',
     marginHorizontal: 20,
-    borderRadius: 8,
+    borderRadius: 21,
+
+
+    shadowColor: "skyblue",
+    shadowOpacity: 0.53,
+    shadowRadius: 13.97,
+    elevation: 8,
     // paddingTop:'19%'
     // paddingBottom: '8%',
 
@@ -123,15 +139,27 @@ const styles = StyleSheet.create({
   miniHeader: {
     display: "flex",
     flexDirection: "row",
-    marginTop:"15%",
-     marginLeft:30,
-    marginRight:30,
+    justifyContent: "space-between",
+    marginTop: "1%",
+    marginLeft: 30,
+    marginRight: 30,
+    // shadowColor: 'skyblue',
+    // shadowOpacity: 0.25,
+    // shadowRadius: 3.84,
+    // elevation: 5,
+    // shadowColor: "#000",
+    // borderBottomColor: "yellow",
+    // backgroundColor:"green",
+    // height: "8%",
   },
   btncontainer: {
-    display: "flex",
+    // display: "flex",
     flexDirection: "row",
-     marginLeft:"20%",
-    marginRight:30,
+    height: "5%",
+    marginBottom: "2%",
+
+    // marginLeft: "20%",
+    // marginRight: 30,
   },
   btnHeader: {
     borderRadius: 4,
@@ -139,15 +167,20 @@ const styles = StyleSheet.create({
     minWidth: '25%',
     textAlign: 'center',
     color: 'skyBlue',
-    shadowColor: 'gray',
+    shadowColor: 'skyblue',
     borderRadius: 10,
-    elevation: 4,
+    elevation: 8,
     height: 35,
     display: "flex",
     justifyContent: 'center',
-    alignItems:"center",
-    paddingTop:"2%",
-    marginRight:5,
+    alignItems: "center",
+    // paddingTop: "1%",
+    marginRight: 5,
+    fontSize: 22,
+    // marginBottom:"2%"
+
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
   }
 
 

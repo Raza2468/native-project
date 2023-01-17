@@ -1,7 +1,7 @@
 import React from 'react'
 import { ImageBackground, StyleSheet, Text, View, Button } from 'react-native';
 import laungimage from '../assets/lounge.jpg';
-import Icon from 'react-native-vector-icons/FontAwesome';
+// import Icon from 'react-native-vector-icons/FontAwesome';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -22,22 +22,25 @@ export default function Homescreen() {
       <View style={styles.quickcontainer}>
         <Text style={styles.heading}>Quick view</Text>
 
-        <View style={styles.quickflex}>
+        <View style={styles.videoConatiner}>
           <View style={styles.quickimg}>
+            <Text style={styles.imgtxt}>Front</Text>
             <ImageBackground source={laungimage} resizeMode="cover" style={styles.imagevertical}>
-              <Text style={styles.imgtxt}>Front</Text>
             </ImageBackground>
+          </View>
+          <View style={styles.roWvideoConatiner}>
+            <View style={styles.quickimg2}>
+              <Text style={styles.imgtxt}>Living room</Text>
+            </View>
+            <View style={styles.quickimg2}>
+              <Text style={styles.imgtxt}>Garage</Text>
+            </View>
           </View>
 
-          <View style={styles.quickimg2}>
-            <ImageBackground source={laungimage} resizeMode="cover" style={styles.imagevertical2}>
-              <Text style={styles.imgtxt}>Living room</Text>
-            </ImageBackground>
-            <ImageBackground source={laungimage} resizeMode="cover" style={styles.imagevertical2}>
-              <Text style={styles.imgtxt}>Garage</Text>
-            </ImageBackground>
-          </View>
         </View>
+
+
+
 
       </View>
       {/*  */}
@@ -50,7 +53,7 @@ export default function Homescreen() {
             </Text><Text>View all devices</Text></View>
         </View>
         <View style={styles.bgdbtn}>
-          <View style={styles.btnd}><Text> <Ionicons name="stats-chart" size={24} color="skyblue" style={{padding:9}}/> Stats</Text></View>
+          <View style={styles.btnd}><Text> <Ionicons name="stats-chart" size={24} color="skyblue" style={{ padding: 9 }} /> Stats</Text></View>
           <View style={styles.btnd}><Text>  <AntDesign name="videocamera" size={24} color="skyblue" /> Recording</Text></View>
           <View style={styles.btnd}><Text> <AntDesign name="setting" size={24} color="skyblue" /> Setting</Text></View>
         </View>
@@ -83,12 +86,16 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     flex: 1,
+
   },
   quickcontainer: {
     display: "flex",
     flex: 5,
     marginBottom: 20,
     marginTop: 40,
+  },
+  multiVideo: {
+    display: "flex",
   },
   btncontainer: {
     display: "flex",
@@ -120,8 +127,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-evenly",
     flexDirection: "row",
     borderRadius: 10,
-    elevation: 4,
-    shadowColor: 'gray',
+    elevation: 8,
+    shadowColor: 'skyblue',
   },
   btnd: {
 
@@ -134,53 +141,89 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     borderRadius: 10,
     elevation: 4,
-    shadowColor: 'gray',
+    shadowColor: 'skyblue',
     // padding:10,
     // margin:9
   },
-  quickflex: {
-    display: "flex",
-    flexDirection: "row",
-    flex: 5,
-    // justifyContent:"space-between",
-    marginTop: 20,
-  },
+  // quickflex: {
+  //   display: "flex",
+  //   flexDirection: "row",
+  //   flex: 1,
+  //   // justifyContent:"space-between",
+  //   marginTop: 20,
+  // },
   quickimg: {
-    display: "flex",
-    flexDirection: "column",
-    flex: 5,
+    // display: "flex",
+    // flexDirection: "column",
+    // flex: 1,
     // justifyContent:"space-between"
+    // borderWidth: 1,
+    // borderColor: '#fff',
+
+    backgroundColor: '#68a0cf',
+    borderRadius: 20,
+    elevation: 8,
+    shadowColor: 'skyblue',
+    width: "60%",
   },
+
+
   quickimg2: {
-    display: "flex",
-    flexDirection: "column",
-    flex: 5,
-    justifyContent: "space-between",
-    marginLeft: 20,
-  },
-  imagevertical: {
-    height: "100%",
-    width: "100%",
-    backgroundColor: "green",
-    
-    borderRadius: 10,
-    elevation: 8,
-    shadowColor: 'gray',
-
-  },
-  imagevertical2: {
+    // display: "flex",
+    // flexDirection: "column",
+    // flex: 5,
+    // justifyContent: "space-between",
+    margin: 10,
     height: "45%",
-    width: "100%",
-    backgroundColor: "green",
 
-    
-    borderRadius: 10,
+
+    // borderWidth: 1,
+    // borderColor: '#fff',
+    backgroundColor: '#68a0cf',
+    borderRadius: 20,
     elevation: 8,
-    shadowColor: 'gray',
+    shadowColor: 'skyblue',
+    // marginBottom: "3%"
   },
+  // imagevertical: {
+  //   height: "100%",
+  //   // width: "100%",
+  //   backgroundColor: "green",
+
+
+  //   // marginTop: 20,
+  //   // marginRight: 40,
+  //   // marginLeft: 40,
+  //   // marginTop: 10,
+  //   // paddingTop: 20,
+
+  //   // paddingTop: 10,
+  //   // paddingBottom: 20,
+  //   backgroundColor: '#68a0cf',
+  //   borderWidth: 1,
+  //   // borderColor: '#fff',
+  //   borderRadius: 20,
+  //   elevation: 8,
+  //   shadowColor: 'skyblue',
+
+  //   borderTopLeftRadius: 20,
+  //   borderTopRightRadius: 20,
+
+  // },
+  // imagevertical2: {
+  //   height: "45%",
+  //   width: "100%",
+  //   backgroundColor: "green",
+
+
+  //   borderRadius: 10,
+  //   elevation: 8,
+  //   shadowColor: 'skyblue',
+  // },
   heading: {
     fontSize: 30,
     fontWeight: "700",
+    color: "black",
   },
   txt: {
     fontSize: 16,
@@ -189,7 +232,9 @@ const styles = StyleSheet.create({
   },
   flexdown:
   {
-    flex: 1
+    flex: 1,
+    // position:"absolute"
+    bottom:-30
   },
   imgtxt:
   {
@@ -199,4 +244,21 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     marginTop: 20,
   },
+  videoConatiner: {
+    // backgroundColor: "skyblue",
+    height: "90%",
+    display: 'flex',
+    flexDirection: "row",
+    justifyContent: "space-between"
+  },
+
+  roWvideoConatiner: {
+    // backgroundColor: "green",
+    // height: "40%",
+
+    display: 'flex',
+    flexDirection: 'column',
+    width: "40%",
+    // padding: "2%"
+  }
 })

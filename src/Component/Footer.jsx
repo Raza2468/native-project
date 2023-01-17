@@ -7,6 +7,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
+
 export default function Footer() {
 
   const navigation = useNavigation();
@@ -38,9 +39,11 @@ const styles = StyleSheet.create({
     elevation: 2,
     shadowColor: 'skyblue',
     // marginBottom: 0
-    top: '40%',
+    // top: '40%',
+    bottom:"-10%",
     width:"100%",
-    position: 'absolute', left: 0, right: 0, bottom: 0,
+    // position: 'absolute', 
+    left: 0, right: 0, bottom: 10,
   }
   ,
   footerchild: {

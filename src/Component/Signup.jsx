@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, Image, TextInput, Button, ImageBackground, ScrollView } from 'react-native'
 import React from 'react'
-import logo from '../assets/logo.png';
+import logo from '../assets/logo2.png';
+import siginBack from '../assets/siginBack.png'
 import { useNavigation } from '@react-navigation/native';
 
 
@@ -9,13 +10,13 @@ export default function Signup() {
   const navigation = useNavigation();
   const [text, onChangeText] = React.useState('Useless Text');
   const [number, onChangeNumber] = React.useState('');
-  const image = { uri: 'https://i.pinimg.com/originals/d0/2b/5b/d02b5b51fadb746eb1b2e3017ae1a716.jpg' };
-  const logo = { uri: 'https://i.pinimg.com/originals/b1/9e/56/b19e56e0b9e23b771eb2dd1183bfe378.png' };
+  // const image = { uri: 'https://i.pinimg.com/originals/d0/2b/5b/d02b5b51fadb746eb1b2e3017ae1a716.jpg' };
+  // const logo = { require(url'https://i.pinimg.com/originals/b1/9e/56/b19e56e0b9e23b771eb2dd1183bfe378.png') };
 
   return (
 
     <View style={styles.container}>
-      <ImageBackground source={image} resizeMode="cover" style={styles.image}>
+      <ImageBackground source={siginBack} resizeMode="cover" style={styles.image}>
         <ScrollView>
 
           <View style={styles.main}>
@@ -93,8 +94,8 @@ const styles = StyleSheet.create({
     // height: "160%",
     backgroundColor: "white",
     padding: 20,
-    elevation: 9,
-    shadowColor: 'gray',
+    elevation: 10,
+    shadowColor: 'skyblue',
     borderRadius: 15,
 
   },

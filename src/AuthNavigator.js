@@ -16,6 +16,7 @@ import SettingScreen from './Component/Setting';
 import Statusscreen from './Component/Statusscreen';
 import CalenderScreen from './Component/Calendar';
 import VideoScreen from './Component/Video';
+import StartScreen from './Component/StartScreen';
 
 // import Navbar from "../Navbar";
 // import Footer from "../Footer";
@@ -24,6 +25,11 @@ const Stack = createNativeStackNavigator();
 
 const AuthNavigator = () => (
   <Stack.Navigator>
+    <Stack.Screen
+      name="StartScreen"
+      options={{headerShown: false}}
+      component={StartScreen}
+    />
     <Stack.Screen
       name="signup"
       options={{headerShown: false}}
@@ -36,8 +42,7 @@ const AuthNavigator = () => (
     />
     <Stack.Screen
       name="Devicescreen"
-      
-      // options={{headerShown: false}}
+      options={{headerShown: false}}
       component={Devicescreen}
     />
     <Stack.Screen
@@ -110,9 +115,11 @@ const AuthNavigator = () => (
     />
     <Stack.Screen
       name="Calender Screen"
-      options={{
-        // headerShown: false,
-      }}
+      options={
+        {
+          // headerShown: false,
+        }
+      }
       component={CalenderScreen}
     />
     {/* 

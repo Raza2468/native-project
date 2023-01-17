@@ -5,10 +5,12 @@ import {View, Text} from 'react-native';
 import AuthNavigator from './src/AuthNavigator';
 import CalenderScreen from './src/Component/Calendar';
 
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 // https://oblador.github.io/react-native-vector-icons/
 
 const App = () => {
   const Stack = createNativeStackNavigator();
+  const Tab = createBottomTabNavigator();
   return (
     // <>
     //   <CalenderScreen />
