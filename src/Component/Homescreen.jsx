@@ -1,15 +1,17 @@
 import React from 'react'
-import { ImageBackground, StyleSheet, Text, View, Button } from 'react-native';
+import { ImageBackground, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import laungimage from '../assets/lounge.jpg';
 // import Icon from 'react-native-vector-icons/FontAwesome';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Footer from './Footer';
-
+import { useNavigation } from '@react-navigation/native';
 
 
 export default function Homescreen() {
+
+  const navigation = useNavigation();
   return (
 
     <View style={styles.main}>
@@ -45,17 +47,17 @@ export default function Homescreen() {
       </View>
       {/*  */}
       <View style={styles.btncontainer}>
-        <View style={styles.bg}>
+        <TouchableOpacity style={styles.bg}  onPress={() => navigation.navigate('Devicescreen')}>
           <View style={styles.btn}>
             <Text>
               {/* <Feather name="share-2" size={24} color="black" /> */}
               <MaterialIcons name="device-hub" size={30} color="skyblue" />
             </Text><Text>View all devices</Text></View>
-        </View>
+        </TouchableOpacity>
         <View style={styles.bgdbtn}>
-          <View style={styles.btnd}><Text> <Ionicons name="stats-chart" size={24} color="skyblue" style={{ padding: 9 }} /> Stats</Text></View>
-          <View style={styles.btnd}><Text>  <AntDesign name="videocamera" size={24} color="skyblue" /> Recording</Text></View>
-          <View style={styles.btnd}><Text> <AntDesign name="setting" size={24} color="skyblue" /> Setting</Text></View>
+          <TouchableOpacity style={styles.btnd} onPress={() => navigation.navigate('Statusscreen')}><Text> <Ionicons name="stats-chart" size={24} color="skyblue" style={{ padding: 9 }} /> Stats</Text></TouchableOpacity>
+          <TouchableOpacity style={styles.btnd} onPress={() => navigation.navigate('Recording')}><Text>  <AntDesign name="videocamera" size={24} color="skyblue" /> Recording</Text></TouchableOpacity>
+          <TouchableOpacity style={styles.btnd}  onPress={() => navigation.navigate('SettingScreen')}><Text> <AntDesign name="setting" size={24} color="skyblue" /> Setting</Text></TouchableOpacity>
         </View>
 
       </View>

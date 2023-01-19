@@ -175,6 +175,11 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "space-evenly",
         flex: 8,
+
+
+ 
+        // flexDirection: 'row',
+        // alignItems: 'center',
     },
     heading: {
         fontSize: 30,
@@ -202,12 +207,24 @@ const styles = StyleSheet.create({
         borderBottomColor: "gray",
         borderBottomWidth: 1,
 
+        height: 100,
+        elevation: 15,
+        borderRadius: 10,
+        backgroundColor: "white",
+        marginVertical: 10,
+        marginHorizontal: 20,
+        paddingHorizontal: 10,
+        padding:0
+
     },
     cardimg: {
         height: "80%",
         width: "35%",
-        marginTop: "4%",
-        marginLeft: "1%"
+        marginTop: "1.5%",
+        marginLeft: "-0.5%",
+        marginRight:"1%",
+        elevation: 15,
+        borderRadius: 10,
     },
     cardbody: {
         height: "100%",
@@ -216,6 +233,8 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-evenly",
         alignItems: "center",
+
+        
     },
     spotto: {
         height: 10,

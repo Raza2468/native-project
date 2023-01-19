@@ -1,7 +1,6 @@
 import { ImageBackground, StyleSheet, Text, View, Button, Image, Switch } from 'react-native';
 // import FontAwesome, { SolidIcons, RegularIcons, BrandIcons } from 'react-native-fontawesome';
 import laungimage from '../assets/lounge.jpg';
-import Footer from './Footer';
 import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
 
@@ -10,13 +9,12 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-
+// import Footer from './Footer';
 // import { AntDesign } from '@expo/vector-icons';
 // import { Feather } from '@expo/vector-icons';
 // import { MaterialIcons } from '@expo/vector-icons';
 // import { FontAwesome5 } from '@expo/vector-icons';
 // import { Ionicons } from '@expo/vector-icons';
-
 // import { SimpleLineIcons } from '@expo/vector-icons';
 
 export default function Setting() {

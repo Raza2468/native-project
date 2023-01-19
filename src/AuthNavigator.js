@@ -41,11 +41,11 @@ const AuthNavigator = () => (
       options={{headerShown: false}}
       component={Footer}
     />
-    {/* <Stack.Screen
+    <Stack.Screen
       name="Devicescreen"
       options={{headerShown: false}}
       component={Devicescreen}
-    /> */}
+    />
     <Stack.Screen
       name="Gridscreen"
       options={{headerShown: false}}
@@ -123,14 +123,15 @@ const AuthNavigator = () => (
       }
       component={CalenderScreen}
     />
-    {/* 
+    
     <Stack.Screen
-      name="Homescreen"
+      name="Statusscreen"
       options={{
         headerShown: false,
       }}
-      component={Homescreen}
+      component={Statusscreen}
     />
+    {/* 
     <Stack.Screen
       name="Gridscreen"
       options={{

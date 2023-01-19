@@ -7,6 +7,7 @@ import CalenderScreen from './src/Component/Calendar';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Footer from './src/Component/Footer';
+import Statusscreen from './src/Component/Statusscreen';
 // https://oblador.github.io/react-native-vector-icons/
 
 const App = () => {
@@ -14,25 +15,26 @@ const App = () => {
   const Tab = createBottomTabNavigator();
   return (
     // <>
-    //   <Footer />
+    //   <Statusscreen />
     // </>
 
     <NavigationContainer
     options={{headerShown: false}}
     >
-      {/* <Stack.Navigator>
-        <Stack.Screen
-          name="Footer"
-          component={Footer}
-          options={{headerShown: false}}
-        />
-    
-      </Stack.Navigator>  */}
       <AuthNavigator />
-     {/* <Stack.Navigator> */}
-        {/* <Stack.Screen name="detail" component={Detail} /> */}
-      {/* </Stack.Navigator> */}
     </NavigationContainer>
+
+    //   {/* <Stack.Navigator>
+    //     <Stack.Screen
+    //       name="Footer"
+    //       component={Footer}
+    //       options={{headerShown: false}}
+    //     />
+
+    //   </Stack.Navigator>  */}
+    //  {/* <Stack.Navigator> */}
+    //     {/* <Stack.Screen name="detail" component={Detail} /> */}
+    // {/* </Stack.Navigator> */}
   );
 };
 
