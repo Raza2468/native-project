@@ -56,7 +56,7 @@ export default function Signup() {
                   <Button title="Sign in"
                     color="#1877F2"
                     style={styles.btn}
-                    onPress={() => navigation.navigate('Homescreen')}
+                    onPress={() => navigation.navigate('Footer')}
                   />
                 </View>
 

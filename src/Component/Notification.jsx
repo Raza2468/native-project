@@ -141,7 +141,7 @@ export default function Notification() {
 
 
             </View>
-            <Footer />
+            {/* <Footer /> */}
         </View>
     )
 }

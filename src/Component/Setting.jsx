@@ -118,7 +118,7 @@ export default function Setting() {
 
 
       </View>
-      <Footer />
+      {/* <Footer /> */}
     </View>
   )
 }

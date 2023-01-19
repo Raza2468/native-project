@@ -1,7 +1,5 @@
 import React from 'react'
 import { ImageBackground, StyleSheet, Text, View, Button, Dimensions, SafeAreaView, StatusBar, ScrollView } from 'react-native';
-// import laungimage from '../assets/lounge.jpg';
-import Footer from './Footer';
 import Video from 'react-native-video';
 import { useNavigation } from '@react-navigation/native'
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -73,9 +71,6 @@ export default function Devicescreen() {
 
         </View>
 
-        <View
-          style={{ flex: 1,bottom:10,position:"absolute"}}
-        ><Footer /></View>
 
       </View>
       {/* </ScrollView> */}

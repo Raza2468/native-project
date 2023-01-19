@@ -37,7 +37,7 @@ export default function Statusscreen() {
 
 
          </View>
-         <Footer />
+         {/* <Footer /> */}
       </View>
    )
 }

@@ -112,9 +112,9 @@ export default function Gridscreen() {
                     >Close</Button>
                 </View>
             </View>
-            <View style={{ display: "flex" }}>
+            {/* <View style={{ display: "flex" }}>
                 <Footer />
-            </View>
+            </View> */}
         </View >
     )
 }

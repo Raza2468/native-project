@@ -40,9 +40,9 @@ export default function Camerascreen() {
           </ImageBackground>
         </TouchableOpacity>
 
-        <View style={{ display: "flex",position:"absolute" }}>
-          <Footer />
-        </View>
+      </View>
+      <View style={{ display: "flex" }}>
+        <Footer />
       </View>
     </View>
   );
@@ -50,7 +50,7 @@ export default function Camerascreen() {
 
 const styles = StyleSheet.create({
   setpage: {
-    paddingTop: 40,
+    // paddingTop: 40,
   },
   image:
   {

@@ -17,6 +17,7 @@ import Statusscreen from './Component/Statusscreen';
 import CalenderScreen from './Component/Calendar';
 import VideoScreen from './Component/Video';
 import StartScreen from './Component/StartScreen';
+import Footer from './Component/Footer';
 
 // import Navbar from "../Navbar";
 // import Footer from "../Footer";
@@ -36,15 +37,15 @@ const AuthNavigator = () => (
       component={Signup}
     />
     <Stack.Screen
-      name="Homescreen"
+      name="Footer"
       options={{headerShown: false}}
-      component={Homescreen}
+      component={Footer}
     />
-    <Stack.Screen
+    {/* <Stack.Screen
       name="Devicescreen"
       options={{headerShown: false}}
       component={Devicescreen}
-    />
+    /> */}
     <Stack.Screen
       name="Gridscreen"
       options={{headerShown: false}}
@@ -114,7 +115,7 @@ const AuthNavigator = () => (
       component={VideoScreen}
     />
     <Stack.Screen
-      name="Calender Screen"
+      name="CalenderScreen"
       options={
         {
           // headerShown: false,

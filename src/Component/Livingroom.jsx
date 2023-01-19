@@ -31,7 +31,9 @@ export default function Livingroom() {
 
         {/* body */}
         <View style={styles.bodyconatiner}>
-          <ImageBackground source={laungimage} resizeMode="cover" style={styles.imagevertical}>
+          <ImageBackground 
+          // source={laungimage} 
+          resizeMode="cover" style={styles.imagevertical}>
           </ImageBackground>
 
           <View style={styles.options}>
@@ -62,7 +64,7 @@ export default function Livingroom() {
 
 const styles = StyleSheet.create({
   main: {
-    paddingTop: 40,
+    // paddingTop: 40,  
     display: "flex",
     flexDirection: "column",
     flex: 1,
@@ -107,7 +109,11 @@ const styles = StyleSheet.create({
   imagevertical: {
     height: "40%",
     width: "100%",
-    backgroundColor: "green",
+    backgroundColor: "skyblue",
+    shadowColor: "skyblue",
+    shadowOpacity: 0.53,
+    shadowRadius: 13.97,
+    elevation: 8,
   },
   options: {
     height: "10%",

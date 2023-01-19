@@ -59,9 +59,9 @@ export default function Homescreen() {
         </View>
 
       </View>
-      <View style={styles.flexdown}>
-        <Footer />
-      </View>
+      {/* <Footer /> */}
+      {/* <View style={styles.flexdown}>
+      </View> */}
     </View>
   );
 }

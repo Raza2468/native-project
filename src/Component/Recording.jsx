@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, View,TouchableOpacity  } from 'react-native'
 import { useNavigation } from '@react-navigation/native';
 import laungimage from '../assets/lounge.jpg';
 import Footer from './Footer';
@@ -26,19 +26,46 @@ export default function Recording() {
                 <Text style={styles.heading}>Recordings</Text>
                 <AntDesign name="setting" size={24} color="#1877F2" onPress={() => navigation.navigate('SettingScreen')} />
             </View>
+
+
+            {/* <View style={style.cartCard}>
+                <Image source={item.image} style={{ height: 80, width: 80 }} />
+                <View
+                    style={{
+                        height: 100,
+                        marginLeft: 10,
+                        paddingVertical: 20,
+                        flex: 1,
+                    }}>
+                    <Text style={{ fontWeight: 'bold', fontSize: 16 }}>{item.name}</Text>
+                    <Text style={{ fontSize: 13, color: COLORS.grey }}>
+                        {item.ingredients}
+                    </Text>
+                    <Text style={{ fontSize: 17, fontWeight: 'bold' }}>${item.price}</Text>
+                </View>
+                <View style={{ marginRight: 20, alignItems: 'center' }}>
+                    <Text style={{ fontWeight: 'bold', fontSize: 18 }}>3</Text>
+                    <View style={style.actionBtn}>
+                        <Icon name="remove" size={25} color={COLORS.white} />
+                        <Icon name="add" size={25} color={COLORS.white} />
+                    </View>
+                </View>
+            </View> */}
+
             <View style={styles.setdisplayofpage}>
 
                 {/* body */}
                 <View style={styles.bodyconatiner}>
                     <Text style={styles.headingcam}>Select Camera</Text>
 
-                    <View style={styles.card}>
+                    {/* <Text > */}
+                    <TouchableOpacity  style={styles.card} onPress={() => navigation.navigate('CalenderScreen')}>
                         <Image
                             style={styles.cardimg}
                             source={laungimage}
                         />
 
-                        <View style={styles.cardbody}>
+                        <View style={styles.cardbody} >
                             <View >
                                 <Text style={styles.headingtwo} onPress={() => navigation.navigate('CalenderScreen')}> Living room</Text>
                                 <Text style={styles.paragray}>  Camera 1
@@ -47,8 +74,9 @@ export default function Recording() {
                             <View style={styles.spotto}>
                             </View>
                         </View>
-                    </View>
-                    <View style={styles.card}>
+                    </TouchableOpacity >
+                    {/* </Text> */}
+                    <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('CalenderScreen')}>
                         <Image
                             style={styles.cardimg}
                             source={laungimage}
@@ -66,8 +94,8 @@ export default function Recording() {
                             <View style={styles.spotto}>
                             </View>
                         </View>
-                    </View>
-                    <View style={styles.card}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('CalenderScreen')}>
                         <Image
                             style={styles.cardimg}
                             source={laungimage}
@@ -75,18 +103,17 @@ export default function Recording() {
 
                         <View style={styles.cardbody} >
                             <View>
-                                <Text style={styles.headingtwo} onPress={() => navigation.navigate('CalenderScreen')}>
+                                <Text style={styles.headingtwo} >
                                     Front
                                 </Text>
                                 <Text style={styles.paragray}>
                                     Camera 3
                                 </Text>
                             </View>
-                            <View style={styles.spotto}>
-                            </View>
+                            <View style={styles.spotto}></View>
                         </View>
-                    </View>
-                    <View style={styles.card}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('CalenderScreen')}>
                         <Image
                             style={styles.cardimg}
                             source={laungimage}
@@ -94,7 +121,7 @@ export default function Recording() {
 
                         <View style={styles.cardbody} >
                             <View>
-                                <Text style={styles.headingtwo} onPress={() => navigation.navigate('CalenderScreen')}>
+                                <Text style={styles.headingtwo} >
                                     Back area
                                 </Text>
                                 <Text style={styles.paragray}>
@@ -104,8 +131,8 @@ export default function Recording() {
                             <View style={styles.spotto}>
                             </View>
                         </View>
-                    </View>
-                    <View style={styles.card}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.card}  onPress={() => navigation.navigate('CalenderScreen')}>
                         <Image
                             style={styles.cardimg}
                             source={laungimage}
@@ -113,7 +140,7 @@ export default function Recording() {
 
                         <View style={styles.cardbody} >
                             <View>
-                                <Text style={styles.headingtwo} onPress={() => navigation.navigate('CalenderScreen')}>
+                                <Text style={styles.headingtwo}>
                                     Garage
                                 </Text>
                                 <Text style={styles.paragray}>
@@ -123,7 +150,7 @@ export default function Recording() {
                             <View style={styles.spotto}>
                             </View>
                         </View>
-                    </View>
+                    </TouchableOpacity>
 
 
 
@@ -135,14 +162,14 @@ export default function Recording() {
 
             </View>
             <Footer />
-        </View>
+        </View >
     )
 }
 
 const styles = StyleSheet.create({
 
     main: {
-        paddingTop: 40,
+        // paddingTop: 40,
         display: "flex",
         flexDirection: "column",
         flex: 1,
@@ -189,17 +216,15 @@ const styles = StyleSheet.create({
         color: "gray"
     },
     card: {
-        display: "flex",
-        flexDirection: "row",
-        height: "15%",
-        width: "90%",
+        height: 100,
+        elevation: 15,
         borderRadius: 10,
-        //    shadowOpacity: 0.25,
-        //     shadowRadius: 10,
-        //  elevation: 9,
-        //    shadowColor: 'gray',
-        borderWidth: 1,
-        bordercolor: "gray",
+        backgroundColor: "white",
+        marginVertical: 10,
+        marginHorizontal: 20,
+        paddingHorizontal: 10,
+        flexDirection: 'row',
+        alignItems: 'center',
 
     },
     cardimg: {
@@ -219,6 +244,11 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-evenly",
         alignItems: "center",
+
+        shadowOpacity: 0.25,
+        shadowRadius: 10,
+        elevation: 9,
+        shadowColor: 'skyblue',
     },
     spotto: {
         height: 10,

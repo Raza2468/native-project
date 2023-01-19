@@ -35,9 +35,9 @@ export default function Camerascreen1() {
         </View>
 
       </View>
-      <View style={styles.flexdown}>
+      {/* <View style={styles.flexdown}>
         <Footer />
-      </View>
+      </View> */}
 
     </View>
   )
