@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
     },
     color: {
         color: "#1877F2",
-        fontSize: 22,
+        fontSize: 19,
     },
     colorHorizontal: {
         color: "#1877F2",

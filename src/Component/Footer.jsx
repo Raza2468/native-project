@@ -26,11 +26,10 @@ export default function Footer() {
     <>
       {/* <NavigationContainer> */}
       <Tab.Navigator
-        initialRouteName="Home"
+        // initialRouteName="Home"
         activeColor="#f0edf6"
         inactiveColor="#3e2465"
         barStyle={{ backgroundColor: '#694fad' }}
-      //   initialRouteName="Home"
       // screenOptions={{
       //   tabBarActiveTintColor: 'skyblue',
       // }}
@@ -58,8 +57,8 @@ export default function Footer() {
           name='notification'
           component={Notification}
           options={{
-            tabBarLabel: '',
-
+            tabBarLabel: 'notifications',
+            headerShown: false,
             tabBarIcon: ({ color, size }) => (
               <Ionicons name="notifications-outline" color={color} size={30} />
             ),
@@ -69,7 +68,7 @@ export default function Footer() {
         <Tab.Screen name='setting' component={Setting} 
            options={{
             tabBarLabel: '',
-
+            headerShown: false,
             tabBarIcon: ({ color, size }) => (
               <AntDesign name="user" color={color} size={30} />
             ),

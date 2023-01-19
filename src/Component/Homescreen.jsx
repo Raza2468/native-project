@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
   },
   bgdbtn: {
 
-    height: "50%",
+    height: "55%",
     display: "flex",
     alignItems: "center",
     justifyContent: "space-evenly",
@@ -134,10 +134,10 @@ const styles = StyleSheet.create({
   },
   btnd: {
 
-    width: "20%",
+    width: "33%",
     height: "100%",
     backgroundColor: "white",
-    display: "flex",
+    // display: "flex",
     alignItems: "center",
     justifyContent: 'center',
     flexDirection: "row",

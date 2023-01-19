@@ -3,6 +3,8 @@
 import * as React from 'react';
 import { View, StyleSheet, Button } from 'react-native';
 import Video from 'react-native-video';
+import Footer from './Footer';
+
 
 
 export default function VideoScreen() {
@@ -31,6 +33,7 @@ export default function VideoScreen() {
           }
         />
       </View>
+      <Footer />
     </View>
   );
 }

@@ -43,14 +43,14 @@ export default function CalenderScreen() {
         btncontainer: {
             display: "flex",
             flexDirection: "row",
-            marginTop: '-8%'
+            marginTop: '8%'
             //  marginLeft:"20%",
             // marginRight:30,
         },
         btnHeader: {
             borderRadius: 4,
             backgroundColor: '#F2F2F2',
-            minWidth: '15%',
+            minWidth: '20%',
             textAlign: 'center',
             color: 'skyBlue',
             shadowColor: 'gray',
@@ -66,10 +66,10 @@ export default function CalenderScreen() {
         btnHeaderDone: {
             borderRadius: 4,
             backgroundColor: '#22709E',
-            minWidth: '15%',
+            minWidth: '20%',
             textAlign: 'center',
             color: 'white',
-            shadowColor: 'gray',
+            shadowColor: 'skyblue',
             borderRadius: 10,
             elevation: 4,
             height: 35,
@@ -87,12 +87,17 @@ export default function CalenderScreen() {
         btnClose: {
             marginTop: "10%",
             backgroundColor: "#22709E",
-            minWidth: '25%',
+            minWidth: '35%',
             textAlign: 'center',
             color: 'white',
             height: 35,
             fontWeight: "38",
-            fontSize: 23
+            fontSize: 23,
+            textAlign: 'center',
+            color: 'white',
+            shadowColor: 'skyblue',
+            borderRadius: 10,
+            elevation: 4,
         }
 
     });
@@ -103,9 +108,9 @@ export default function CalenderScreen() {
                 // onDateChange={setSelectedStartDate}\
                 style={{
                     // borderWidth: 1,
-                    borderColor: 'red',
-                    height: 390,
-                    width: 390
+                    // borderColor: 'red',
+                    // height: 390,
+                    // width: "170%"
                 }}
                 onDayPress={day => {
                     console.log('selected day', day);
