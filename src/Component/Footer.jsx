@@ -57,7 +57,7 @@ export default function Footer() {
           name='notification'
           component={Notification}
           options={{
-            tabBarLabel: 'notifications',
+            tabBarLabel: '',
             headerShown: false,
             tabBarIcon: ({ color, size }) => (
               <Ionicons name="notifications-outline" color={color} size={30} />
@@ -65,8 +65,8 @@ export default function Footer() {
           }}
 
         />
-        <Tab.Screen name='setting' component={Setting} 
-           options={{
+        <Tab.Screen name='setting' component={Setting}
+          options={{
             tabBarLabel: '',
             headerShown: false,
             tabBarIcon: ({ color, size }) => (
@@ -77,40 +77,7 @@ export default function Footer() {
         {/* <Tab.Screen name={Devicescreen} component={Devicescreen} />
         <Tab.Screen name={settingsName} component={SettingScreen} /> */}
       </Tab.Navigator>
-      {/* </NavigationContainer> */}
-      {/* <View style={styles.containerfooter}>
-
-        <AntDesign name="home" size={30} color="gray" onPress={() => navigation.navigate('Homescreen')} />
-        <FontAwesome5 name="video" size={30} color="gray" onPress={() => navigation.navigate('Devicescreen')} />
-        <Ionicons name="notifications-outline" size={30} color="gray" onPress={() => navigation.navigate('Notification')} />
-        <AntDesign name="user" size={30} color="gray" onPress={() => navigation.navigate('SettingScreen')} />
-
-      </View> */}
     </>
   );
 }
 
-const styles = StyleSheet.create({
-  containerfooter: {
-    // backgroundColor: 'green',
-    // display: "flex",
-    backgroundColor: "#F5F5F5",
-    justifyContent: 'space-evenly',
-    alignItems: "center",
-    height: 70,
-    flexDirection: 'row',
-    borderTopColor: 'black',
-    elevation: 2,
-    shadowColor: 'skyblue',
-    // marginBottom: 0
-    // top: '40%',
-    bottom: "-10%",
-    width: "100%",
-    // position: 'absolute', 
-    left: 0, right: 0, bottom: 10,
-  }
-  ,
-  footerchild: {
-    color: 'black'
-  },
-});

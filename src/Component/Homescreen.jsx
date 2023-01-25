@@ -1,5 +1,5 @@
 import React from 'react'
-import { ImageBackground, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { ImageBackground, StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 import laungimage from '../assets/lounge.jpg';
 // import Icon from 'react-native-vector-icons/FontAwesome';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -17,8 +17,22 @@ export default function Homescreen() {
     <View style={styles.main}>
 
       <View style={styles.headingcontainer}>
-        <Text style={styles.heading}>Hello, Anderson</Text>
-        <Text style={styles.txt}>You have 4 active devices</Text>
+
+        <View>
+          <Text style={styles.heading}>Hello, Anderson</Text>
+          <Text style={styles.txt}>You have 4 active devices</Text>
+        </View>
+
+        <View style={styles.btncontainerHeader}>
+
+          <TouchableOpacity onPress={() => navigation.navigate('Gridscreen')}>
+            <Image
+              source={require('../assets/alexaM.png')}
+              style={styles.ImageIconStyle}
+            />
+          </TouchableOpacity >
+          <Text style={styles.btnHeader} ><Ionicons name="add" size={35} color="black" /></Text>
+        </View>
       </View>
 
       <View style={styles.quickcontainer}>
@@ -47,7 +61,7 @@ export default function Homescreen() {
       </View>
       {/*  */}
       <View style={styles.btncontainer}>
-        <TouchableOpacity style={styles.bg}  onPress={() => navigation.navigate('Devicescreen')}>
+        <TouchableOpacity style={styles.bg} onPress={() => navigation.navigate('Devicescreen')}>
           <View style={styles.btn}>
             <Text>
               {/* <Feather name="share-2" size={24} color="black" /> */}
@@ -57,7 +71,7 @@ export default function Homescreen() {
         <View style={styles.bgdbtn}>
           <TouchableOpacity style={styles.btnd} onPress={() => navigation.navigate('Statusscreen')}><Text> <Ionicons name="stats-chart" size={24} color="skyblue" style={{ padding: 9 }} /> Stats</Text></TouchableOpacity>
           <TouchableOpacity style={styles.btnd} onPress={() => navigation.navigate('Recording')}><Text>  <AntDesign name="videocamera" size={24} color="skyblue" /> Recording</Text></TouchableOpacity>
-          <TouchableOpacity style={styles.btnd}  onPress={() => navigation.navigate('SettingScreen')}><Text> <AntDesign name="setting" size={24} color="skyblue" /> Setting</Text></TouchableOpacity>
+          <TouchableOpacity style={styles.btnd} onPress={() => navigation.navigate('SettingScreen')}><Text> <AntDesign name="setting" size={24} color="skyblue" /> Setting</Text></TouchableOpacity>
         </View>
 
       </View>
@@ -76,8 +90,56 @@ const styles = StyleSheet.create({
     flex: 1,
     // backgroundColor: "yellow",
     padding: 10,
-    margin: 10
+    margin: 10,
+    marginTop:"2%"
   },
+  btncontainerHeader: {
+    display: "flex",
+    flexDirection: "row",
+    height: "100%",
+    // marginBottom: "2%",
+    justifyContent: "flex-end",
+    // marginTop: -10,
+    // marginLeft: "20%",
+    // marginRight: 30,
+    // backgroundColor:"green",
+    width: "40%",
+    alignItems: "center",
+    justifyContent: "space-evenly"
+  },
+  ImageIconStyle: {
+    // padding: 10,
+    // margin: 5,
+    height: 50,
+    width: 50,
+    resizeMode: 'stretch',
+    // marginTop:"-100%"
+  },
+  btnHeader: {
+    borderRadius: 4,
+    backgroundColor: '#F2F2F2',
+    minWidth: '15%',
+    textAlign: 'center',
+    color: 'skyBlue',
+    shadowColor: 'skyblue',
+    borderRadius: 10,
+    elevation: 8,
+    height: 50,
+    width: 50,
+    display: "flex",
+    justifyContent: 'center',
+    alignItems: "center",
+    // paddingTop: "10%",
+    marginRight: 5,
+    fontSize: 22,
+    // marginBottom:"2%"
+    // marginTop:"-12%",
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+
+    textShadowColor: "skyblue"
+  }
+  ,
   setdisplayofpage: {
     display: "flex",
     flexDirection: "column",
@@ -86,8 +148,10 @@ const styles = StyleSheet.create({
   },
   headingcontainer: {
     display: "flex",
-    flexDirection: "column",
+    flexDirection: "row",
     flex: 1,
+    justifyContent: "space-around",
+    // backgroundColor:"yellow"
 
   },
   quickcontainer: {
@@ -224,8 +288,9 @@ const styles = StyleSheet.create({
   // },
   heading: {
     fontSize: 30,
-    fontWeight: "700",
+    fontWeight: "400",
     color: "black",
+
   },
   txt: {
     fontSize: 16,
@@ -236,13 +301,13 @@ const styles = StyleSheet.create({
   {
     flex: 1,
     // position:"absolute"
-    bottom:-30
+    bottom: -30
   },
   imgtxt:
   {
     color: 'white',
     fontSize: 20,
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
     marginLeft: 20,
     marginTop: 20,
   },

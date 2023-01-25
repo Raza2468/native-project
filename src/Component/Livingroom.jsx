@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
   setdisplayofpage: {
     display: "flex",
     flexDirection: "column",
-    flex: 9,
+    flex: 15,
     padding: 25,
   },
   headingconatiner: {

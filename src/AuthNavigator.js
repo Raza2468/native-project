@@ -131,14 +131,14 @@ const AuthNavigator = () => (
       }}
       component={Statusscreen}
     />
-    {/* 
     <Stack.Screen
-      name="Gridscreen"
+      name="Home"
       options={{
         headerShown: false,
       }}
-      component={Gridscreen}
+      component={Homescreen}
     />
+    {/* 
 
    
     <Stack.Screen

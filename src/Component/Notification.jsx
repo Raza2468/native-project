@@ -18,10 +18,10 @@ import Feather from 'react-native-vector-icons/Feather';
 
 
 export default function Notification() {
-    
-  const navigation = useNavigation();
-    
-  return (
+
+    const navigation = useNavigation();
+
+    return (
         <View style={styles.main}>
             {/* header */}
             <View style={styles.headingconatiner}>
@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
         flex: 8,
 
 
- 
+
         // flexDirection: 'row',
         // alignItems: 'center',
     },
@@ -197,7 +197,7 @@ const styles = StyleSheet.create({
     },
     paragray: {
         color: "gray",
-
+        fontWeight: 'bold'
     },
     card: {
         display: "flex",
@@ -214,7 +214,7 @@ const styles = StyleSheet.create({
         marginVertical: 10,
         marginHorizontal: 20,
         paddingHorizontal: 10,
-        padding:0
+        padding: 0
 
     },
     cardimg: {
@@ -222,7 +222,7 @@ const styles = StyleSheet.create({
         width: "35%",
         marginTop: "1.5%",
         marginLeft: "-0.5%",
-        marginRight:"1%",
+        marginRight: "1%",
         elevation: 15,
         borderRadius: 10,
     },
@@ -234,7 +234,7 @@ const styles = StyleSheet.create({
         justifyContent: "space-evenly",
         alignItems: "center",
 
-        
+
     },
     spotto: {
         height: 10,

@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
     setdisplayofpage: {
         display: "flex",
         flexDirection: "column",
-        flex: 9,
+        flex: 15,
         padding: 25,
     },
     headingconatiner: {
@@ -213,7 +213,8 @@ const styles = StyleSheet.create({
         color: "#1877F2",
     },
     paragray: {
-        color: "gray"
+        color: "gray",
+        fontWeight: "700"
     },
     card: {
         height: 100,

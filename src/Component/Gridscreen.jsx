@@ -109,6 +109,7 @@ export default function Gridscreen() {
                         title="Close"
                         color="#1877F2"
                         style={styles.btn}
+                        onPress={() => navigation.navigate('Home')}
                     >Close</Button>
                 </View>
             </View>

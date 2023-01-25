@@ -73,11 +73,14 @@ const styles = StyleSheet.create({
       display: "flex",
       flexDirection: "column",
       flex: 1,
+      // height:"100%",
+      backgroundColor:"yellow",
    },
    setdisplayofpage: {
       display: "flex",
+      // marginBottom:"0%",
       flexDirection: "column",
-      flex: 9,
+      flex: 15,
       // padding: 25,
    },
    headingconatiner: {

@@ -76,7 +76,7 @@ export default function Camerasceen2() {
 
 const styles = StyleSheet.create({
   main: {
-    paddingTop: 40,
+    // paddingTop: 40,
     display: "flex",
     flexDirection: "column",
     flex: 1,
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   setdisplayofpage: {
     display: "flex",
     flexDirection: "column",
-    flex: 9,
+    flex: 15,
 
 
   },

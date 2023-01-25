@@ -15,8 +15,8 @@ export default function Signup() {
 
   return (
 
-    <View style={styles.container}>
       <ImageBackground source={siginBack} resizeMode="cover" style={styles.image}>
+    <View style={styles.container}>
         <ScrollView>
 
           <View style={styles.main}>
@@ -65,8 +65,8 @@ export default function Signup() {
           </View>
 
         </ScrollView>
-      </ImageBackground>
     </View>
+      </ImageBackground>
   )
 }
 
@@ -76,6 +76,10 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
+    marginTop:"15%",
+    // height:"400%"
+
+    // alignItems:"center"
   },
   image: {
     flex: 1,
@@ -100,11 +104,11 @@ const styles = StyleSheet.create({
 
   },
   tinyLogo: {
-    width: "90%",
-    height: 100,
-    padding: 80,
-    margin:80,
-    marginLeft:10
+    width: "100%",
+    // height: 100,
+    // padding: 80,
+    // margin:80,
+    // marginLeft:10
 
   },
   loginform: {
