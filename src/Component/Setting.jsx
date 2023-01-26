@@ -71,7 +71,7 @@ export default function Setting() {
             <View style={styles.optioncontainer}>
               <View style={styles.align}>
                 <FontAwesome5 name="share-alt" size={24} color="black" />
-                <Text style={styles.setingoption}>Share With Firends</Text>
+                <Text style={styles.setingoption}>Share With Friends</Text>
               </View>
 
               <MaterialIcons name="keyboard-arrow-right" size={24} color="black" />

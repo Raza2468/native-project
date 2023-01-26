@@ -1,13 +1,14 @@
 import React from 'react'
-import { ImageBackground, StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
+import { ImageBackground, StyleSheet, Text, View, TouchableOpacity, Image, ScrollView } from 'react-native';
 import laungimage from '../assets/lounge.jpg';
 // import Icon from 'react-native-vector-icons/FontAwesome';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Footer from './Footer';
 import { useNavigation } from '@react-navigation/native';
-
+import { Card, Button } from 'react-native-paper';
 
 export default function Homescreen() {
 
@@ -34,6 +35,38 @@ export default function Homescreen() {
           <Text style={styles.btnHeader} ><Ionicons name="add" size={35} color="black" /></Text>
         </View>
       </View>
+
+      <ScrollView
+        // horizontal={true} 
+        style={{ flex: 1 }}
+      >
+
+        <Card>
+          <View
+            style={styles.headerIcon}
+          >
+            {/*  <Card.Actions> */}
+            <TouchableOpacity >
+              <FontAwesome5 name="paw" size={34} />
+            </TouchableOpacity>
+            {/*  </Card.Actions> */}
+
+            <TouchableOpacity >
+              <FontAwesome5 name="warehouse" size={34} />
+            </TouchableOpacity >
+            <TouchableOpacity >
+              <FontAwesome5 name="business-time" size={34} />
+            </TouchableOpacity >
+            <TouchableOpacity >
+              <FontAwesome5 name="box" size={34} />
+            </TouchableOpacity >
+            <TouchableOpacity >
+              <FontAwesome5 name="lightbulb" size={34} />
+            </TouchableOpacity >
+          </View>
+        </Card>
+      </ScrollView>
+
 
       <View style={styles.quickcontainer}>
         <Text style={styles.heading}>Quick view</Text>
@@ -91,7 +124,7 @@ const styles = StyleSheet.create({
     // backgroundColor: "yellow",
     padding: 10,
     margin: 10,
-    marginTop:"2%"
+    marginTop: "2%"
   },
   btncontainerHeader: {
     display: "flex",
@@ -154,11 +187,29 @@ const styles = StyleSheet.create({
     // backgroundColor:"yellow"
 
   },
+  headerIcon: {
+    display: "flex",
+    flexDirection: "row",
+    // flex: 1,
+    justifyContent: "space-evenly",
+    width: "100%",
+    // backgroundColor:"yellow",
+    borderColor: "red",
+    // shadowOpacity: 0.25,
+    // shadowRadius: 16.84,
+    // shadowColor: "#000",
+    // elevation: 3,
+    height: 50,
+    alignItems: "center",
+    // borderRadius: 5,
+    // shadowColor: 'skyblue',
+
+  },
   quickcontainer: {
     display: "flex",
     flex: 5,
     marginBottom: 20,
-    marginTop: 40,
+    // marginTop: 10,
   },
   multiVideo: {
     display: "flex",

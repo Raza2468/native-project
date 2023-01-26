@@ -1,15 +1,17 @@
 
 
 import * as React from 'react';
-import { View, StyleSheet, Button } from 'react-native';
+import { View, StyleSheet, Button, Text, CheckBox } from 'react-native';
 import Video from 'react-native-video';
 import Footer from './Footer';
-
+import { Checkbox, List, MD3Colors } from 'react-native-paper';
 
 
 export default function VideoScreen() {
   const video = React.useRef(null);
   const [status, setStatus] = React.useState({});
+  const [checked, setChecked] = React.useState(false);
+  const [isSelected, setSelection] = React.useState(false);
 
   return (
 
@@ -25,15 +27,52 @@ export default function VideoScreen() {
         isLooping
         onPlaybackStatusUpdate={status => setStatus(() => status)}
       />
+
+
+
+
+
+
+      <List.Section style={{ width: '100%', }}>
+        <List.Subheader>Some title</List.Subheader>
+        <List.Item title="loerm ipsum dollar magnam"
+          left={() => <Checkbox
+            status={checked ? 'checked' : 'unchecked'}
+            onPress={() => {
+              setChecked(!checked);
+            }} />}
+        />
+        <List.Item title="loerm ipsum dollar magnam"
+          left={() => <Checkbox
+            status={checked ? 'checked' : 'unchecked'}
+            onPress={() => {
+              setChecked(!checked);
+            }} />}
+        />
+        <List.Item title="loerm ipsum dollar magnam"
+          left={() => <Checkbox
+            status={checked ? 'checked' : 'unchecked'}
+            onPress={() => {
+              setChecked(!checked);
+            }} />}
+        />
+        <List.Item title="loerm ipsum dollar magnam"
+          left={() => <Checkbox
+            status={checked ? 'checked' : 'unchecked'}
+            onPress={() => {
+              setChecked(!checked);
+            }} />}
+        />
+      </List.Section>
+
       <View style={styles.buttons}>
         <Button
           title={status.isPlaying ? 'Pause' : 'Play'}
-          onPress={() =>
-            status.isPlaying ? video.current.pauseAsync() : video.current.playAsync()
+          onPress={() => status.isPlaying ? video.current.pauseAsync() : video.current.playAsync()
           }
         />
       </View>
-      <Footer />
+      {/* <Footer /> */}
     </View>
   );
 }
@@ -46,14 +85,24 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop: "-0%"
   },
   video: {
     flex: 1,
-    alignSelf: 'stretch'
+    alignSelf: 'stretch',
+    // alignItems: "flex-start"
   },
   buttons: {
     margin: 16
-  }
+  },
+  containerCheckbox: {
+    flex: 1,
+    alignItems: 'baseline',
+    // justifyContent: 'flex-start',
+    // marginBottom: 20,
+    // flexDirection: 'row-reverse',
+    width: "100%"
+  },
 });
 
 
