@@ -1,35 +1,71 @@
-import { ImageBackground, StyleSheet, Text, View, Button, Image, Switch } from 'react-native';
-// import FontAwesome, { SolidIcons, RegularIcons, BrandIcons } from 'react-native-fontawesome';
+import { ImageBackground, StyleSheet, Text, View, Image, Switch } from 'react-native';
 import laungimage from '../assets/lounge.jpg';
 import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
+import { Button, Menu, Divider, Provider } from 'react-native-paper';
 
 import Feather from 'react-native-vector-icons/Feather';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-// import Footer from './Footer';
-// import { AntDesign } from '@expo/vector-icons';
-// import { Feather } from '@expo/vector-icons';
-// import { MaterialIcons } from '@expo/vector-icons';
-// import { FontAwesome5 } from '@expo/vector-icons';
-// import { Ionicons } from '@expo/vector-icons';
-// import { SimpleLineIcons } from '@expo/vector-icons';
+import Fontisto from 'react-native-vector-icons/Fontisto';
 
 export default function Setting() {
 
   const [isEnabled, setIsEnabled] = useState(false);
+  const [visible, setVisible] = React.useState(false);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
   const navigation = useNavigation();
+
+
+
+  const openMenu = () => setVisible(true);
+  const closeMenu = () => setVisible(false);
 
   return (
     <View style={styles.main}>
       {/* header */}
+      {/* <Provider>
+        <View
+          style={{
+            paddingTop: 10,
+            flexDirection: 'row',
+            // justifyContent: 'flex-end',
+            // backgroundColor: "red",
+            height: "70%",
+
+          }}>
+
+          <View
+          style={{justifyContent:"flex-end",backgroundColor:"pink"}}
+          >
+            <Text 
+            // style={styles.heading}
+            >Menu</Text>
+          </View>
+
+          <View style={{justifyContent:"flex-end",backgroundColor:"pink"}}>
+            <Menu
+              visible={visible}
+              onDismiss={closeMenu}
+
+              anchor={
+                // <Button onPress={openMenu} style={{ backgroundColor: "yellow" }}>Show menu</Button>
+                <Fontisto name="more-v-a" onPress={openMenu} size={34} color="#1877F2" style={{ backgroundColor: "yellow", margin: "2%" }} />
+              }>
+              <Menu.Item onPress={() => { }} title="Item 1" />
+              <Menu.Item onPress={() => { }} title="Item 2" />
+              <Menu.Item onPress={() => { }} title="Item 3" />
+              <Divider />
+            </Menu>
+          </View>
+
+        </View>
+      </Provider> */}
+
       <View style={styles.headingconatiner}>
         <Feather name="arrow-left" size={24} color="#1877F2" onPress={() => navigation.navigate('Homescreen')} />
-        {/* <SimpleLineIcons name="arrow-left" size={24} color="#1877F2" /> */}
-
         <Text style={styles.heading}>Settings</Text>
       </View>
       <View style={styles.setdisplayofpage}>
@@ -137,13 +173,17 @@ const styles = StyleSheet.create({
   },
   headingconatiner: {
     display: "flex",
-    flexDirection: "row",
+     flexDirection: "row",
     alignItems: "center",
     flex: 1,
     borderBottomWidth: 1,
     borderBottomColor: "gray",
     marginLeft: 25,
     marginRight: 25,
+
+
+    alignItems: "flex-start",
+    justifyContent: "flex-start"
   },
   bodyconatiner: {
     display: "flex",

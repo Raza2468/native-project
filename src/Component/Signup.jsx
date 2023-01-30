@@ -13,10 +13,11 @@ export default function Signup() {
   // const image = { uri: 'https://i.pinimg.com/originals/d0/2b/5b/d02b5b51fadb746eb1b2e3017ae1a716.jpg' };
   // const logo = { require(url'https://i.pinimg.com/originals/b1/9e/56/b19e56e0b9e23b771eb2dd1183bfe378.png') };
 
+  console.log(number, "number");
   return (
 
-      <ImageBackground source={siginBack} resizeMode="cover" style={styles.image}>
-    <View style={styles.container}>
+    <ImageBackground source={siginBack} resizeMode="cover" style={styles.image}>
+      <View style={styles.container}>
         <ScrollView>
 
           <View style={styles.main}>
@@ -48,7 +49,7 @@ export default function Signup() {
                   onChangeText={onChangeNumber}
                   value={number}
                   placeholder="Password"
-                  keyboardType="visible-password"
+                // keyboardType="visible-password"
                 />
 
                 <Text style={styles.forget}>Forget Password?</Text>
@@ -65,8 +66,8 @@ export default function Signup() {
           </View>
 
         </ScrollView>
-    </View>
-      </ImageBackground>
+      </View>
+    </ImageBackground>
   )
 }
 
@@ -76,7 +77,7 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
-    marginTop:"15%",
+    marginTop: "15%",
     // height:"400%"
 
     // alignItems:"center"
@@ -135,7 +136,7 @@ const styles = StyleSheet.create({
     marginTop: 15,
     alignSelf: "center",
     // borderRadius: 150,
-    
+
   },
   btn: {
     borderRadius: 14,

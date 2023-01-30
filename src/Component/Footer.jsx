@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 // import FontAwesome, { SolidIcons, RegularIcons, BrandIcons } from 'react-native-fontawesome';
 // import { Feather, AntDesign, Ionicons, MaterialCommunityIcons } from 'react-native-vector-icons';
@@ -8,11 +7,11 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import StartScreen from './StartScreen';
+// import StartScreen from './StartScreen';
 import Homescreen from './Homescreen';
 import Notification from './Notification';
 import Setting from './Setting';
-import VideoScreen from './Video';
+// import VideoScreen from './Video';
 import Devicescreen from './Devicescreen';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';

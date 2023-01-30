@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { View, StyleSheet, Button, Text, CheckBox } from 'react-native';
 import Video from 'react-native-video';
-import Footer from './Footer';
+// import Footer from './Footer';
 import { Checkbox, List, MD3Colors } from 'react-native-paper';
 
 
@@ -16,12 +16,16 @@ export default function VideoScreen() {
   return (
 
     <View style={styles.container}>
+
+
       <Video
         ref={video}
         style={styles.video}
         source={{
           uri: 'https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
         }}
+
+        controls={true}
         useNativeControls
         resizeMode="contain"
         isLooping
