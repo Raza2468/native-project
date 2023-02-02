@@ -10,20 +10,21 @@ import Footer from './src/Component/Footer';
 import Statusscreen from './src/Component/Statusscreen';
 import VideoScreen from './src/Component/Video';
 import Setting from './src/Component/Setting';
+import Domi from './src/Component/domi';
 // https://oblador.github.io/react-native-vector-icons/
 
 const App = () => {
   const Stack = createNativeStackNavigator();
   const Tab = createBottomTabNavigator();
   return (
-    <>
-      <VideoScreen />
-    </>
+    // <>
+    //   <Domi />
+    // </>
 
     
-    // <NavigationContainer options={{headerShown: false}}>
-    //   <AuthNavigator />
-    // </NavigationContainer>
+    <NavigationContainer options={{headerShown: false}}>
+      <AuthNavigator />
+    </NavigationContainer>
 
     //   {/* <Stack.Navigator>
     //     <Stack.Screen

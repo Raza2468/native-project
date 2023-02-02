@@ -1,8 +1,8 @@
-import { ImageBackground, StyleSheet, Text, View, Image, Switch } from 'react-native';
+import { ImageBackground, StyleSheet, Text, View, Image, Switch, Button } from 'react-native';
 import laungimage from '../assets/lounge.jpg';
 import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
-import { Button, Menu, Divider, Provider } from 'react-native-paper';
+import { Menu, Divider, Provider } from 'react-native-paper';
 
 import Feather from 'react-native-vector-icons/Feather';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -25,49 +25,37 @@ export default function Setting() {
 
   return (
     <View style={styles.main}>
-      {/* header */}
-      {/* <Provider>
+
+
+      <Provider>
         <View
           style={{
             paddingTop: 10,
             flexDirection: 'row',
-            // justifyContent: 'flex-end',
-            // backgroundColor: "red",
-            height: "70%",
-
+            justifyContent: 'space-between',
+            // backgroundColor: "yellow",
+            color: "#1877F2",
+            marginLeft: "5%",
+            marginRight: "5%"
           }}>
-
-          <View
-          style={{justifyContent:"flex-end",backgroundColor:"pink"}}
-          >
-            <Text 
-            // style={styles.heading}
-            >Menu</Text>
-          </View>
-
-          <View style={{justifyContent:"flex-end",backgroundColor:"pink"}}>
-            <Menu
-              visible={visible}
-              onDismiss={closeMenu}
-
-              anchor={
-                // <Button onPress={openMenu} style={{ backgroundColor: "yellow" }}>Show menu</Button>
-                <Fontisto name="more-v-a" onPress={openMenu} size={34} color="#1877F2" style={{ backgroundColor: "yellow", margin: "2%" }} />
-              }>
-              <Menu.Item onPress={() => { }} title="Item 1" />
-              <Menu.Item onPress={() => { }} title="Item 2" />
-              <Menu.Item onPress={() => { }} title="Item 3" />
-              <Divider />
-            </Menu>
-          </View>
-
+          <Feather name="arrow-left" size={24} color="#1877F2" onPress={() => navigation.navigate('Homescreen')} />
+          <Text style={styles.heading}>Notifiaction</Text>
+          <Menu
+            visible={visible}
+            style={{ color: "blue" }}
+            onDismiss={closeMenu}
+            anchor={<Fontisto name="more-v-a" onPress={openMenu} size={34} color="#1877F2" />
+            }>
+            <Menu.Item onPress={() => { setVisible(false) }} title="Ite m 1" />
+            <Divider />
+            <Menu.Item onPress={() => { setVisible(false) }} title="Item 2" />
+            <Divider />
+            <Menu.Item onPress={() => { setVisible(false) }} title="Item 3" />
+          </Menu>
         </View>
-      </Provider> */}
+      </Provider>
 
-      <View style={styles.headingconatiner}>
-        <Feather name="arrow-left" size={24} color="#1877F2" onPress={() => navigation.navigate('Homescreen')} />
-        <Text style={styles.heading}>Settings</Text>
-      </View>
+
       <View style={styles.setdisplayofpage}>
 
         {/* body */}
@@ -152,7 +140,6 @@ export default function Setting() {
 
 
       </View>
-      {/* <Footer /> */}
     </View>
   )
 }
@@ -160,7 +147,7 @@ export default function Setting() {
 const styles = StyleSheet.create({
 
   main: {
-    paddingTop: 40,
+    paddingTop: 20,
     display: "flex",
     flexDirection: "column",
     flex: 1,
@@ -173,17 +160,24 @@ const styles = StyleSheet.create({
   },
   headingconatiner: {
     display: "flex",
-     flexDirection: "row",
+    flexDirection: "row",
     alignItems: "center",
+    // justifyContent: "space-between",
     flex: 1,
-    borderBottomWidth: 1,
-    borderBottomColor: "gray",
     marginLeft: 25,
     marginRight: 25,
+    // display: "flex",
+    // flexDirection: "row",
+    // alignItems: "center",
+    // flex: 1,
+    // borderBottomWidth: 1,
+    // borderBottomColor: "gray",
+    // marginLeft: 25,
+    // marginRight: 25,
 
 
-    alignItems: "flex-start",
-    justifyContent: "flex-start"
+    // alignItems: "flex-start",
+    // justifyContent: "flex-start"
   },
   bodyconatiner: {
     display: "flex",
@@ -212,7 +206,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "700",
     color: "#1877F2",
-    marginLeft: 50
+    // marginLeft: 50
   },
   usernamebox: {
     display: "flex",
