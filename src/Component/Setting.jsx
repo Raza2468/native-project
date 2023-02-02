@@ -11,7 +11,12 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 
-export default function Setting() {
+export default function Setting(raza) {
+
+  const [RoutaA, setRoutaA] = useState('condition');
+
+  raza = { RoutaA }
+  // console.log(raza, "raza");
 
   const [isEnabled, setIsEnabled] = useState(false);
   const [visible, setVisible] = React.useState(false);
@@ -19,11 +24,12 @@ export default function Setting() {
   const navigation = useNavigation();
 
 
-
   const openMenu = () => setVisible(true);
   const closeMenu = () => setVisible(false);
 
   return (
+
+
     <View style={styles.main}>
 
 
@@ -33,24 +39,23 @@ export default function Setting() {
             paddingTop: 10,
             flexDirection: 'row',
             justifyContent: 'space-between',
-            // backgroundColor: "yellow",
             color: "#1877F2",
             marginLeft: "5%",
             marginRight: "5%"
           }}>
-          <Feather name="arrow-left" size={24} color="#1877F2" onPress={() => navigation.navigate('Homescreen')} />
-          <Text style={styles.heading}>Notifiaction</Text>
+          <Feather name="arrow-left" size={24} color="#1877F2" onPress={() => navigation.navigate('Home')} />
+          <Text style={styles.heading}>Setting</Text>
           <Menu
             visible={visible}
             style={{ color: "blue" }}
             onDismiss={closeMenu}
             anchor={<Fontisto name="more-v-a" onPress={openMenu} size={34} color="#1877F2" />
             }>
-            <Menu.Item onPress={() => { setVisible(false) }} title="Ite m 1" />
+            <Menu.Item onPress={() => { setVisible(false) }} title="Office" />
             <Divider />
-            <Menu.Item onPress={() => { setVisible(false) }} title="Item 2" />
+            <Menu.Item onPress={() => { setVisible(false) }} title="House" />
             <Divider />
-            <Menu.Item onPress={() => { setVisible(false) }} title="Item 3" />
+            <Menu.Item onPress={() => { setVisible(false) }} title="log Out" />
           </Menu>
         </View>
       </Provider>
@@ -73,7 +78,7 @@ export default function Setting() {
             <View style={styles.optioncontainer}>
               <View style={styles.align}>
                 <Feather name="bell" size={24} color="black" />
-                <Text style={styles.setingoption} onPress={() => navigation.navigate('Notification')}>Notification</Text>
+                <Text style={styles.setingoption} onPress={() => navigation.navigate('Notification')}>Setting</Text>
               </View>
 
               <Switch
@@ -156,35 +161,15 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     flex: 9,
-    padding: 25,
+    // padding: 25,
   },
-  headingconatiner: {
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    // justifyContent: "space-between",
-    flex: 1,
-    marginLeft: 25,
-    marginRight: 25,
-    // display: "flex",
-    // flexDirection: "row",
-    // alignItems: "center",
-    // flex: 1,
-    // borderBottomWidth: 1,
-    // borderBottomColor: "gray",
-    // marginLeft: 25,
-    // marginRight: 25,
-
-
-    // alignItems: "flex-start",
-    // justifyContent: "flex-start"
-  },
+  
   bodyconatiner: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "space-evenly",
-    flex: 8,
+    // flex: 8,
   },
   settingcontainer: {
     height: "70%",
@@ -195,6 +180,7 @@ const styles = StyleSheet.create({
     elevation: 7,
     shadowColor: 'gray',
     padding: 20,
+    margin:20
   },
   align: {
     display: "flex",
@@ -244,7 +230,7 @@ const styles = StyleSheet.create({
     height: "13%",
     display: "flex",
     alignSelf: "center",
-    marginTop: "8%",
+    marginTop: "4%",
   },
 
 

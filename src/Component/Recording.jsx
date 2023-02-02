@@ -21,36 +21,11 @@ export default function Recording() {
         <View style={styles.main}>
             {/* header */}
             <View style={styles.headingconatiner}>
-                {/* <SimpleLineIcons name="arrow-left" size={24} color="#1877F2" onPress={() => navigation.navigate('Homescreen')}/> */}
-                <Feather name="arrow-left" size={24} color="#1877F2" onPress={() => navigation.navigate('Homescreen')} />
+                <Feather name="arrow-left" size={24} color="#1877F2" onPress={() => navigation.navigate('Home')} />
                 <Text style={styles.heading}>Recordings</Text>
                 <AntDesign name="setting" size={24} color="#1877F2" onPress={() => navigation.navigate('SettingScreen')} />
             </View>
 
-
-            {/* <View style={style.cartCard}>
-                <Image source={item.image} style={{ height: 80, width: 80 }} />
-                <View
-                    style={{
-                        height: 100,
-                        marginLeft: 10,
-                        paddingVertical: 20,
-                        flex: 1,
-                    }}>
-                    <Text style={{ fontWeight: 'bold', fontSize: 16 }}>{item.name}</Text>
-                    <Text style={{ fontSize: 13, color: COLORS.grey }}>
-                        {item.ingredients}
-                    </Text>
-                    <Text style={{ fontSize: 17, fontWeight: 'bold' }}>${item.price}</Text>
-                </View>
-                <View style={{ marginRight: 20, alignItems: 'center' }}>
-                    <Text style={{ fontWeight: 'bold', fontSize: 18 }}>3</Text>
-                    <View style={style.actionBtn}>
-                        <Icon name="remove" size={25} color={COLORS.white} />
-                        <Icon name="add" size={25} color={COLORS.white} />
-                    </View>
-                </View>
-            </View> */}
 
             <View style={styles.setdisplayofpage}>
 

@@ -33,7 +33,7 @@ export default function Footer() {
       //   tabBarActiveTintColor: 'skyblue',
       // }}
       >
-        <Tab.Screen name='home' component={Homescreen}
+        <Tab.Screen name='Home' component={Homescreen}
           options={{
             tabBarLabel: '',
             headerShown: false,

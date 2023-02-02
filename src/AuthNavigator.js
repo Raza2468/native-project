@@ -24,7 +24,9 @@ import Footer from './Component/Footer';
 
 const Stack = createNativeStackNavigator();
 
-const AuthNavigator = () => (
+const AuthNavigator = (raza) => (
+
+  
   <Stack.Navigator>
     <Stack.Screen
       name="StartScreen"

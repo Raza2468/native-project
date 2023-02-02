@@ -64,7 +64,7 @@ export default function Livingroom() {
 
 const styles = StyleSheet.create({
   main: {
-    // paddingTop: 40,  
+    paddingTop: 10,  
     display: "flex",
     flexDirection: "column",
     flex: 1,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {View, Text} from 'react-native';
@@ -16,12 +16,12 @@ import Domi from './src/Component/domi';
 const App = () => {
   const Stack = createNativeStackNavigator();
   const Tab = createBottomTabNavigator();
+
   return (
     // <>
-    //   <Domi />
+    //   <VideoScreen />
     // </>
 
-    
     <NavigationContainer options={{headerShown: false}}>
       <AuthNavigator />
     </NavigationContainer>

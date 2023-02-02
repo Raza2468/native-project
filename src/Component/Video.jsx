@@ -1,17 +1,46 @@
 
 
+import { ImageBackground, StyleSheet, Text, View, TouchableOpacity, Share, Image, ScrollView } from 'react-native';
 import * as React from 'react';
-import { View, StyleSheet, Button, Text, CheckBox } from 'react-native';
 import Video from 'react-native-video';
 // import Footer from './Footer';
 import { Checkbox, List, MD3Colors } from 'react-native-paper';
 
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import Feather from 'react-native-vector-icons/Feather';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import { Card, Button } from 'react-native-paper';
 
 export default function VideoScreen() {
   const video = React.useRef(null);
   const [status, setStatus] = React.useState({});
   const [checked, setChecked] = React.useState(false);
   const [isSelected, setSelection] = React.useState(false);
+
+  let Url = 'https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4'
+
+  const onShare = async () => {
+    try {
+      const result = await Share.share({
+        message:
+          `video share ${Url}`,
+      });
+      if (result.action === Share.sharedAction) {
+        if (result.activityType) {
+          // shared with activity type of result.activityType
+          // result.activityType(Url)
+        } else {
+          // shared
+        }
+      } else if (result.action === Share.dismissedAction) {
+        // dismissed
+      }
+    } catch (error) {
+      alert(error.message);
+    }
+  };
+
 
   return (
 
@@ -23,18 +52,20 @@ export default function VideoScreen() {
         style={styles.video}
         source={{
           uri: 'https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
+          headers: {
+            Authorization: 'bearer some-token-value',
+            'X-Custom-Header': 'some value'
+          }
+
         }}
 
         controls={true}
-        useNativeControls
+        fullscreenOrientation="landscape"
+        // useNativeControls
         resizeMode="contain"
-        isLooping
-        onPlaybackStatusUpdate={status => setStatus(() => status)}
+        // isLooping
+        // onPlaybackStatusUpdate={status => setStatus(() => status)}
       />
-
-
-
-
 
 
       <List.Section style={{ width: '100%', }}>
@@ -76,7 +107,32 @@ export default function VideoScreen() {
           }
         />
       </View>
-      {/* <Footer /> */}
+
+      <Card>
+        <View
+          style={styles.headerIcon}
+        >
+          <TouchableOpacity >
+
+            <MaterialIcons name="save-alt" size={34} />
+          </TouchableOpacity>
+          <TouchableOpacity >
+            <MaterialCommunityIcons name="record-circle-outline" size={34} />
+          </TouchableOpacity >
+          <TouchableOpacity >
+            <Feather name="mic" size={34} />
+          </TouchableOpacity >
+          <TouchableOpacity onPress={() => onShare()}>
+
+
+            <FontAwesome name="share-square-o" size={34} />
+          </TouchableOpacity >
+          <TouchableOpacity >
+            <MaterialIcons name="crop-landscape" size={34} />
+          </TouchableOpacity >
+        </View>
+      </Card>
+
     </View>
   );
 }
@@ -90,6 +146,24 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: "-0%"
+  },
+  headerIcon: {
+    display: "flex",
+    flexDirection: "row",
+    // flex: 1,
+    justifyContent: "space-evenly",
+    width: "100%",
+    // backgroundColor:"yellow",
+    borderColor: "red",
+    // shadowOpacity: 0.25,
+    // shadowRadius: 16.84,
+    // shadowColor: "#000",
+    // elevation: 3,
+    height: 50,
+    alignItems: "center",
+    // borderRadius: 5,
+    // shadowColor: 'skyblue',
+
   },
   video: {
     flex: 1,

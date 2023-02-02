@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { ImageBackground, StyleSheet, Text, View, TouchableOpacity, Image, ScrollView } from 'react-native';
 import laungimage from '../assets/lounge.jpg';
 // import Icon from 'react-native-vector-icons/FontAwesome';
@@ -45,12 +45,9 @@ export default function Homescreen() {
           <View
             style={styles.headerIcon}
           >
-            {/*  <Card.Actions> */}
             <TouchableOpacity >
               <FontAwesome5 name="paw" size={34} />
             </TouchableOpacity>
-            {/*  </Card.Actions> */}
-
             <TouchableOpacity >
               <FontAwesome5 name="warehouse" size={34} />
             </TouchableOpacity >

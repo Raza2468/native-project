@@ -28,21 +28,14 @@ export default function Statusscreen() {
    return (
       <View style={styles.main}>
          <View style={styles.setdisplayofpage}>
-            {/* header */}
             <View style={styles.headingconatiner}>
-               {/* <SimpleLineIcons name="arrow-left" size={24} color="#1877F2" /> */}
-
-               {/* <Feather name="arrow-left" size={24} color="#1877F2" onPress={() => navigation.navigate('Homescreen')} /> */}
                <Text style={styles.heading}>Stats</Text>
-               {/* <AntDesign name="setting" size={24} color="#1877F2" /> */}
             </View>
-            {/* body */}
-            <View style={styles.bodyconatiner}>
 
+            <View style={styles.bodyconatiner}>
                <ScrollView style={{ flex: 1 }}>
                   <View style={styles.container}>
                      <Text style={styles.headingcam}>Camera / User</Text>
-                     {/* <Text style={styles.title}>Basic</Text> */}
                      <PieChart
                         widthAndHeight={widthAndHeight}
                         series={series}
@@ -74,7 +67,7 @@ const styles = StyleSheet.create({
       flexDirection: "column",
       flex: 1,
       // height:"100%",
-      backgroundColor:"yellow",
+      // backgroundColor: "yellow",
    },
    setdisplayofpage: {
       display: "flex",
