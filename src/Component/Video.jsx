@@ -1,25 +1,29 @@
 
 
 import { ImageBackground, StyleSheet, Text, View, TouchableOpacity, Share, Image, ScrollView } from 'react-native';
-import * as React from 'react';
+import React, { useState, useRef } from 'react';
 import Video from 'react-native-video';
 // import Footer from './Footer';
 import { Checkbox, List, MD3Colors } from 'react-native-paper';
-
+// import Video from 'react-native-youtube-iframe';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Feather from 'react-native-vector-icons/Feather';
+import Octicons from 'react-native-vector-icons/Octicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Card, Button } from 'react-native-paper';
 
+
 export default function VideoScreen() {
-  const video = React.useRef(null);
-  const [status, setStatus] = React.useState({});
-  const [checked, setChecked] = React.useState(false);
-  const [isSelected, setSelection] = React.useState(false);
+  const video = useRef(null);
+  const [status, setStatus] = useState({});
+  const [checked, setChecked] = useState(false);
+  const [isSelected, setSelection] = useState(false);
+  const [isMute, setMute] = useState(false);
 
-  let Url = 'https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4'
+  let Url = 'https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4';
 
+  const muteVideo = () => setMute(!isMute);
   const onShare = async () => {
     try {
       const result = await Share.share({
@@ -42,13 +46,14 @@ export default function VideoScreen() {
   };
 
 
+
   return (
 
     <View style={styles.container}>
 
 
       <Video
-        ref={video}
+        // ref={video}
         style={styles.video}
         source={{
           uri: 'https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
@@ -56,17 +61,28 @@ export default function VideoScreen() {
             Authorization: 'bearer some-token-value',
             'X-Custom-Header': 'some value'
           }
-
         }}
-
+        muted={isMute}
         controls={true}
-        fullscreenOrientation="landscape"
-        // useNativeControls
+        // onPictureInPictureStatusChanged={true}
+        // onRestoreUserInterfaceForPictureInPictureStop
+        // fullscreenOrientation="landscape"
+        useNativeControls
         resizeMode="contain"
-        // isLooping
-        // onPlaybackStatusUpdate={status => setStatus(() => status)}
-      />
+        isLooping
 
+        // fullscreenOrientation='true'
+        fullscreenAutorotate={true}
+        onPlaybackStatusUpdate={status => setStatus(() => status)}
+      />
+      {/* <View style={styles.video}>
+        <Video
+          mute={isMute}
+          height={300}
+          play={true}
+          videoId={'84WIaK3bl_s'}
+        />
+      </View> */}
 
       <List.Section style={{ width: '100%', }}>
         <List.Subheader>Some title</List.Subheader>
@@ -119,8 +135,8 @@ export default function VideoScreen() {
           <TouchableOpacity >
             <MaterialCommunityIcons name="record-circle-outline" size={34} />
           </TouchableOpacity >
-          <TouchableOpacity >
-            <Feather name="mic" size={34} />
+          <TouchableOpacity onPress={() => muteVideo()}>
+            <Octicons name={isMute ? "mute" : "unmute"} size={34} />
           </TouchableOpacity >
           <TouchableOpacity onPress={() => onShare()}>
 

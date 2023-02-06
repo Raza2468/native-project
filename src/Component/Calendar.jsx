@@ -4,9 +4,13 @@ import { Calendar } from 'react-native-calendars';
 import Footer from './Footer';
 import CalendarPicker from 'react-native-calendar-picker';
 import Moment from 'moment';
+import { Button } from 'react-native-paper';
+import { useNavigation } from '@react-navigation/native';
+
 
 export default function CalenderScreen() {
 
+    const navigation = useNavigation();
     const [selectedStartDate, setSelectedStartDate] = useState(null);
     const [selectedEndDate, setSelectedEndDate] = useState(null);
     Moment.locale('en');
@@ -66,35 +70,43 @@ export default function CalenderScreen() {
         },
         btnHeader: {
             borderRadius: 4,
-            backgroundColor: '#F2F2F2',
-            minWidth: '20%',
-            textAlign: 'center',
+            backgroundColor: "#22709E",
+            minWidth: '21%',
+            marginTop: 4,
+            marginLeft: 'auto',
             color: 'skyBlue',
             shadowColor: 'gray',
             borderRadius: 10,
             elevation: 4,
-            height: 35,
             display: "flex",
             justifyContent: 'center',
             alignItems: "center",
-            paddingTop: "2%",
+            padding: "2%",
             marginRight: 5,
+            color: 'white',
+            height: 40,
+            alignSelf: 'center',
+
+
         },
-        // btnClose: {
-        // marginTop: "10%",
-        // backgroundColor: "#22709E",
-        // minWidth: '35%',
-        // textAlign: 'center',
-        // color: 'white',
-        // height: 35,
-        // fontWeight: "38",
-        // fontSize: 23,
-        // textAlign: 'center',
-        // color: 'white',
-        // shadowColor: 'skyblue',
-        // borderRadius: 10,
-        // elevation: 4,
-        // }
+        btnClose: {
+            backgroundColor: "#22709E",
+            // minWidth: '21%',
+            marginTop: 4,
+            marginLeft: 'auto',
+            color: 'skyBlue',
+            shadowColor: 'gray',
+            borderRadius: 10,
+            elevation: 4,
+            display: "flex",
+            justifyContent: 'center',
+            alignItems: "center",
+            padding: "2%",
+            marginRight: 5,
+            color: 'white',
+            height: 40,
+            alignSelf: 'center'
+        }
     });
     return (
         <SafeAreaView
@@ -151,17 +163,21 @@ export default function CalenderScreen() {
 
                 />
                 <View style={styles.btncontainer}>
-                    <Text style={styles.btnHeader}>
-                        <Text>
-                            Selected Start Date :{selectedStartDate ? Moment(Sdt).format('MMMM Do, YYYY') : ''}
+                    <View>
+                        <Text style={styles.btnHeader}>
+                            <Text>
+                                Selected Start Date :{selectedStartDate ? Moment(Sdt).format('MMMM Do, YYYY') : ''}
+                            </Text>
                         </Text>
-                    </Text>
-                    <Text style={styles.btnHeader} >
-                        <Text style={styles.textStyle}>
-                            Selected End Date : {selectedEndDate ? Moment(Edt).format('MMMM Do, YYYY') : ''}
+                        <Text style={styles.btnHeader} >
+                            <Text style={styles.textStyle}>
+                                Selected End Date : {selectedEndDate ? Moment(Edt).format('MMMM Do, YYYY') : ''}
+                            </Text>
                         </Text>
-                    </Text>
-                    {/* <Text style={styles.btnClose} >Done</Text> */}
+                    </View>
+                    <View>
+                        <Text style={styles.btnClose} onPress={() => navigation.navigate('VideoScreen')}>Done</Text>
+                    </View>
                 </View>
 
 

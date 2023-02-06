@@ -1,4 +1,4 @@
-import { ImageBackground, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { ImageBackground, StyleSheet,Image, Text, View, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import laungimage from '../assets/lounge.jpg';
 import laung2image from '../assets/lounge2.jpg';
@@ -15,7 +15,14 @@ export default function Camerascreen() {
       <View>
         <TouchableOpacity onPress={() => navigation.navigate('Livingroom')}>
           <ImageBackground source={laungimage} resizeMode="cover" style={styles.image}>
-            <Text style={styles.imgtxt}>Lounge</Text>
+            <Text style={styles.imgtxt}>Lounge </Text>
+            <TouchableOpacity onPress={() => navigation.navigate('Gridscreen')}>
+              <Image
+                source={require('../assets/alexaM.png')}
+                style={styles.ImageIconStyle}
+              />
+            </TouchableOpacity >
+
             <View style={styles.dateandspotcontainer}>
               <View style={styles.spot}></View>
               <Text style={styles.datandtime}> Nov 15 09:30:31 </Text>
@@ -59,6 +66,16 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'space-between',
     marginBottom: 1
+  },
+  ImageIconStyle: {
+    // padding: 10,
+    // margin: 5,
+    height: 50,
+    width: 50,
+    alignItems:"flex-end",
+    // resizeMode: 'stretch',
+    marginTop:"-10%",
+    left:"88%"
   },
   spot:
   {

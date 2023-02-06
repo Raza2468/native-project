@@ -23,6 +23,9 @@ const App = () => {
     // </>
 
     <NavigationContainer options={{headerShown: false}}>
+      {/* <CalenderScreen /> */}
+      {/* <VideoScreen /> */}
+      {/* <Domi /> */}
       <AuthNavigator />
     </NavigationContainer>
 
