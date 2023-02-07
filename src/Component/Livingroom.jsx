@@ -44,7 +44,7 @@ export default function Livingroom() {
             <MaterialIcons name="crop-rotate" size={28} color="#1877F2" onPress={() => navigation.navigate('VideoScreen')} />
           </View>
           <View style={styles.historybox}>
-            <Text style={styles.para} onPress={() => navigation.navigate('Recording')}>View history record</Text>
+            <Text style={styles.para} onPress={() => navigation.navigate('Recording')}>24 hour video recording video</Text>
           </View>
 
           <View style={styles.moreoptions}>
@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
   },
   historybox: {
     height: "8%",
-    width: "60%",
+    // width: "60%",
     borderRadius: 50,
     display: "flex",
     flexDirection: "row",
@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderWidth: 1,
     bordercolor: "#1877F2",
-
+    padding: 8,
   },
   para: {
     color: "gray",

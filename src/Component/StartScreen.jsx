@@ -20,26 +20,9 @@ export default function StartScreen() {
 
     return (
 
-        <View style={styles.container}>
-            {loading ? <Signup /> : <Image source={require('../assets/splashScreen2.png')} style={styles.backgroundImage} />}
+        <View style={{ flex: 1 }}>
+            {loading ? <Signup /> : <ImageBackground resizeMode="cover" source={require('../assets/splashScreen2.png')} style={{ flex: 1, justifyContent: "center" }} />}
         </View>
     )
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        flex: 1,
-        justifyContent: "center",
-        alignItems: 'center',
-        width: null,
-        height: null,
-    },
-    backgroundImage: {
-        // width:"105%",
-        flex: 1,
-        resizeMode: 'cover', // or 'stretch'
-        //   width: '70%',
-        //   height:"5%" 
-    },
-})
