@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.Burick.app-mergeReleaseResources-28:/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\GlobalPC\\.gradle\\caches\\transforms-3\\543c06b9575e767622e034792799005c\\transformed\\appcompat-1.4.1\\res\\values-port\\values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        }
+    ]
+}

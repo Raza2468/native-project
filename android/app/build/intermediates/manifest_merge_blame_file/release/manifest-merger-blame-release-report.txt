@@ -1,0 +1,131 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.Burick"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+11-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:5:4-79
+11-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:5:21-76
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:6:5-67
+12-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:6:22-64
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+13-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:7:5-81
+13-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:7:22-78
+14    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+14-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:8:5-81
+14-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:8:22-78
+15    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+15-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:9:5-77
+15-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:9:22-74
+16    <!--  -->
+17    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+17-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:11:5-71
+17-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:11:22-68
+18
+19    <application
+19-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:13:5-37:19
+20        android:name="com.Burick.MainApplication"
+20-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:14:7-38
+21        android:allowBackup="false"
+21-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:18:7-34
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.7.0] C:\Users\GlobalPC\.gradle\caches\transforms-3\bf4b1fbdaca6101e673e865b1fbbc008\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+23        android:icon="@mipmap/ic_launcher"
+23-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:16:7-41
+24        android:label="@string/app_name"
+24-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:15:7-39
+25        android:requestLegacyExternalStorage="true"
+25-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:20:7-50
+26        android:roundIcon="@mipmap/ic_launcher_round"
+26-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:17:7-52
+27        android:theme="@style/AppTheme" >
+27-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:19:7-38
+28        <activity
+28-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:24:7-36:18
+29            android:name="com.Burick.MainActivity"
+29-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:25:9-37
+30            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+30-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:28:9-118
+31            android:exported="true"
+31-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:31:9-32
+32            android:label="@string/app_name"
+32-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:26:9-41
+33            android:launchMode="singleTask"
+33-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:29:9-40
+34            android:supportsPictureInPicture="true"
+34-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:27:9-48
+35            android:windowSoftInputMode="adjustResize" >
+35-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:30:9-51
+36            <intent-filter>
+36-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:32:9-35:25
+37                <action android:name="android.intent.action.MAIN" />
+37-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:33:13-65
+37-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:33:21-62
+38
+39                <category android:name="android.intent.category.LAUNCHER" />
+39-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:34:13-73
+39-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:34:23-70
+40            </intent-filter>
+41        </activity>
+42
+43        <provider
+43-->[:react-native-webview] D:\React-Native\Jetsonlivinng\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:10:9-18:20
+44            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
+44-->[:react-native-webview] D:\React-Native\Jetsonlivinng\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-83
+45            android:authorities="com.Burick.fileprovider"
+45-->[:react-native-webview] D:\React-Native\Jetsonlivinng\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:12:13-64
+46            android:exported="false"
+46-->[:react-native-webview] D:\React-Native\Jetsonlivinng\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-37
+47            android:grantUriPermissions="true" >
+47-->[:react-native-webview] D:\React-Native\Jetsonlivinng\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:14:13-47
+48            <meta-data
+48-->[:react-native-webview] D:\React-Native\Jetsonlivinng\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:15:13-17:63
+49                android:name="android.support.FILE_PROVIDER_PATHS"
+49-->[:react-native-webview] D:\React-Native\Jetsonlivinng\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:16:17-67
+50                android:resource="@xml/file_provider_paths" />
+50-->[:react-native-webview] D:\React-Native\Jetsonlivinng\node_modules\react-native-webview\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:17:17-60
+51        </provider>
+52
+53        <service
+53-->[com.github.HBiSoft:HBRecorder:2.0.3] C:\Users\GlobalPC\.gradle\caches\transforms-3\981c0defba8fdf21689c6609f765130b\transformed\jetified-HBRecorder-2.0.3\AndroidManifest.xml:13:9-16:35
+54            android:name="com.hbisoft.hbrecorder.ScreenRecordService"
+54-->[com.github.HBiSoft:HBRecorder:2.0.3] C:\Users\GlobalPC\.gradle\caches\transforms-3\981c0defba8fdf21689c6609f765130b\transformed\jetified-HBRecorder-2.0.3\AndroidManifest.xml:14:13-70
+55            android:foregroundServiceType="mediaProjection" />
+55-->[com.github.HBiSoft:HBRecorder:2.0.3] C:\Users\GlobalPC\.gradle\caches\transforms-3\981c0defba8fdf21689c6609f765130b\transformed\jetified-HBRecorder-2.0.3\AndroidManifest.xml:15:13-60
+56
+57        <receiver android:name="com.hbisoft.hbrecorder.NotificationReceiver" />
+57-->[com.github.HBiSoft:HBRecorder:2.0.3] C:\Users\GlobalPC\.gradle\caches\transforms-3\981c0defba8fdf21689c6609f765130b\transformed\jetified-HBRecorder-2.0.3\AndroidManifest.xml:18:9-80
+57-->[com.github.HBiSoft:HBRecorder:2.0.3] C:\Users\GlobalPC\.gradle\caches\transforms-3\981c0defba8fdf21689c6609f765130b\transformed\jetified-HBRecorder-2.0.3\AndroidManifest.xml:18:19-77
+58
+59        <provider
+59-->[androidx.emoji2:emoji2:1.0.0] C:\Users\GlobalPC\.gradle\caches\transforms-3\29b16e6ae8e1db4ed0151515ccb7d27f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+60            android:name="androidx.startup.InitializationProvider"
+60-->[androidx.emoji2:emoji2:1.0.0] C:\Users\GlobalPC\.gradle\caches\transforms-3\29b16e6ae8e1db4ed0151515ccb7d27f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+61            android:authorities="com.Burick.androidx-startup"
+61-->[androidx.emoji2:emoji2:1.0.0] C:\Users\GlobalPC\.gradle\caches\transforms-3\29b16e6ae8e1db4ed0151515ccb7d27f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+62            android:exported="false" >
+62-->[androidx.emoji2:emoji2:1.0.0] C:\Users\GlobalPC\.gradle\caches\transforms-3\29b16e6ae8e1db4ed0151515ccb7d27f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+63            <meta-data
+63-->[androidx.emoji2:emoji2:1.0.0] C:\Users\GlobalPC\.gradle\caches\transforms-3\29b16e6ae8e1db4ed0151515ccb7d27f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+64                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+64-->[androidx.emoji2:emoji2:1.0.0] C:\Users\GlobalPC\.gradle\caches\transforms-3\29b16e6ae8e1db4ed0151515ccb7d27f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+65                android:value="androidx.startup" />
+65-->[androidx.emoji2:emoji2:1.0.0] C:\Users\GlobalPC\.gradle\caches\transforms-3\29b16e6ae8e1db4ed0151515ccb7d27f\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+66            <meta-data
+66-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\GlobalPC\.gradle\caches\transforms-3\7ab73aa477cb6933b98626e7cd31dea0\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+67                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+67-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\GlobalPC\.gradle\caches\transforms-3\7ab73aa477cb6933b98626e7cd31dea0\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+68                android:value="androidx.startup" />
+68-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\GlobalPC\.gradle\caches\transforms-3\7ab73aa477cb6933b98626e7cd31dea0\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+69        </provider>
+70    </application>
+71
+72</manifest>
