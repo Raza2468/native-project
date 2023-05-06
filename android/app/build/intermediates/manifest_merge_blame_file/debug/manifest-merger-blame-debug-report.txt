@@ -9,101 +9,101 @@
 9        android:targetSdkVersion="31" />
 10
 11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-11-->D:\React-Native\Jetsonlivinng\android\app\src\debug\AndroidManifest.xml:5:5-77
-11-->D:\React-Native\Jetsonlivinng\android\app\src\debug\AndroidManifest.xml:5:22-75
+11-->D:\React-Native\native-project\android\app\src\debug\AndroidManifest.xml:5:5-77
+11-->D:\React-Native\native-project\android\app\src\debug\AndroidManifest.xml:5:22-75
 12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-12-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:5:4-79
-12-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:5:21-76
+12-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:5:4-79
+12-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:5:21-76
 13    <uses-permission android:name="android.permission.INTERNET" />
-13-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:6:5-67
-13-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:6:22-64
+13-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:6:5-67
+13-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:6:22-64
 14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-14-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:7:5-81
-14-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:7:22-78
+14-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:7:5-81
+14-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:7:22-78
 15    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
-15-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:8:5-81
-15-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:8:22-78
+15-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:8:5-81
+15-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:8:22-78
 16    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!--  -->
-16-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:9:5-77
-16-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:9:22-74
+16-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:9:5-77
+16-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:9:22-74
 17    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-17-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:11:5-71
-17-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:11:22-68
+17-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:11:5-71
+17-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:11:22-68
 18    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 18-->[com.facebook.flipper:flipper:0.125.0] C:\Users\GlobalPC\.gradle\caches\transforms-3\77ae3f3e5474991dc9ef74aee4a28a4f\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:16:5-76
 18-->[com.facebook.flipper:flipper:0.125.0] C:\Users\GlobalPC\.gradle\caches\transforms-3\77ae3f3e5474991dc9ef74aee4a28a4f\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:16:22-73
 19
 20    <application
-20-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:13:5-37:19
+20-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:13:5-37:19
 21        android:name="com.Burick.MainApplication"
-21-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:14:7-38
+21-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:14:7-38
 22        android:allowBackup="false"
-22-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:18:7-34
+22-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:18:7-34
 23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 23-->[androidx.core:core:1.7.0] C:\Users\GlobalPC\.gradle\caches\transforms-3\bf4b1fbdaca6101e673e865b1fbbc008\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 24        android:debuggable="true"
 25        android:icon="@mipmap/ic_launcher"
-25-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:16:7-41
+25-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:16:7-41
 26        android:label="@string/app_name"
-26-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:15:7-39
+26-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:15:7-39
 27        android:requestLegacyExternalStorage="true"
-27-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:20:7-50
+27-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:20:7-50
 28        android:roundIcon="@mipmap/ic_launcher_round"
-28-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:17:7-52
+28-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:17:7-52
 29        android:theme="@style/AppTheme"
-29-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:19:7-38
+29-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:19:7-38
 30        android:usesCleartextTraffic="true" >
-30-->D:\React-Native\Jetsonlivinng\android\app\src\debug\AndroidManifest.xml:8:9-44
+30-->D:\React-Native\native-project\android\app\src\debug\AndroidManifest.xml:8:9-44
 31        <activity
-31-->D:\React-Native\Jetsonlivinng\android\app\src\debug\AndroidManifest.xml:11:9-111
+31-->D:\React-Native\native-project\android\app\src\debug\AndroidManifest.xml:11:9-111
 32            android:name="com.facebook.react.devsupport.DevSettingsActivity"
-32-->D:\React-Native\Jetsonlivinng\android\app\src\debug\AndroidManifest.xml:11:19-83
+32-->D:\React-Native\native-project\android\app\src\debug\AndroidManifest.xml:11:19-83
 33            android:exported="false" />
-33-->D:\React-Native\Jetsonlivinng\android\app\src\debug\AndroidManifest.xml:11:84-108
+33-->D:\React-Native\native-project\android\app\src\debug\AndroidManifest.xml:11:84-108
 34        <activity
-34-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:24:7-36:18
+34-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:24:7-36:18
 35            android:name="com.Burick.MainActivity"
-35-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:25:9-37
+35-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:25:9-37
 36            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-36-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:28:9-118
+36-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:28:9-118
 37            android:exported="true"
-37-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:31:9-32
+37-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:31:9-32
 38            android:label="@string/app_name"
-38-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:26:9-41
+38-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:26:9-41
 39            android:launchMode="singleTask"
-39-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:29:9-40
+39-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:29:9-40
 40            android:supportsPictureInPicture="true"
-40-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:27:9-48
+40-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:27:9-48
 41            android:windowSoftInputMode="adjustResize" >
-41-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:30:9-51
+41-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:30:9-51
 42            <intent-filter>
-42-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:32:9-35:25
+42-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:32:9-35:25
 43                <action android:name="android.intent.action.MAIN" />
-43-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:33:13-65
-43-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:33:21-62
+43-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:33:13-65
+43-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:33:21-62
 44
 45                <category android:name="android.intent.category.LAUNCHER" />
-45-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:34:13-73
-45-->D:\React-Native\Jetsonlivinng\android\app\src\main\AndroidManifest.xml:34:23-70
+45-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:34:13-73
+45-->D:\React-Native\native-project\android\app\src\main\AndroidManifest.xml:34:23-70
 46            </intent-filter>
 47        </activity>
 48
 49        <provider
-49-->[:react-native-webview] D:\React-Native\Jetsonlivinng\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
+49-->[:react-native-webview] D:\React-Native\native-project\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
 50            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
-50-->[:react-native-webview] D:\React-Native\Jetsonlivinng\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-83
+50-->[:react-native-webview] D:\React-Native\native-project\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-83
 51            android:authorities="com.Burick.fileprovider"
-51-->[:react-native-webview] D:\React-Native\Jetsonlivinng\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-64
+51-->[:react-native-webview] D:\React-Native\native-project\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-64
 52            android:exported="false"
-52-->[:react-native-webview] D:\React-Native\Jetsonlivinng\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
+52-->[:react-native-webview] D:\React-Native\native-project\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
 53            android:grantUriPermissions="true" >
-53-->[:react-native-webview] D:\React-Native\Jetsonlivinng\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
+53-->[:react-native-webview] D:\React-Native\native-project\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
 54            <meta-data
-54-->[:react-native-webview] D:\React-Native\Jetsonlivinng\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:63
+54-->[:react-native-webview] D:\React-Native\native-project\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:63
 55                android:name="android.support.FILE_PROVIDER_PATHS"
-55-->[:react-native-webview] D:\React-Native\Jetsonlivinng\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
+55-->[:react-native-webview] D:\React-Native\native-project\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
 56                android:resource="@xml/file_provider_paths" />
-56-->[:react-native-webview] D:\React-Native\Jetsonlivinng\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-60
+56-->[:react-native-webview] D:\React-Native\native-project\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-60
 57        </provider>
 58
 59        <service
